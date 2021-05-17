@@ -20,7 +20,7 @@ function App() {
           exact
         />
         <PublicRoute restricted={true} component={Login} path="/login" exact />
-        <PrivateRoute path="/edit" component={EditProducts} /> */}
+        <PrivateRoute path="/admin" component={admin} /> */}
         </Switch>
       </div>
     </BrowserRouter>

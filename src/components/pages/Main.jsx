@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "../css/Main.css";
 
 function Main() {
@@ -24,14 +26,14 @@ function Main() {
               "
               >
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/Consolas/"
+                    to="/Consolas/"
                   >
                     <img
                       alt="Consolas"
@@ -39,17 +41,17 @@ function Main() {
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">Consolas</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/Laptop/"
+                    to="/Laptop/"
                   >
                     <img
                       alt="Laptop"
@@ -57,17 +59,17 @@ function Main() {
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">Laptop</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/Perifericos/"
+                    to="/Perifericos/"
                   >
                     <img
                       alt="Perifericos"
@@ -77,17 +79,17 @@ function Main() {
                     <span className="css-image-text themed-text">
                       Perifericos
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/Retro/"
+                    to="/Retro/"
                   >
                     <img
                       alt="Retro"
@@ -95,17 +97,17 @@ function Main() {
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">Retro</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/Audio/"
+                    to="/Audio/"
                   >
                     <img
                       alt="Audio"
@@ -113,38 +115,18 @@ function Main() {
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">Audio</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     id="32"
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    __typename="Category"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/PC/"
-                  >
-                    <img
-                      alt="PC"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      loading="lazy"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">PC</span>
-                  </a>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <a
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    href="/PC/"
+                    to="/PC/"
                   >
                     <img
                       alt="PC"
@@ -152,30 +134,212 @@ function Main() {
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">PC</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="css-listItem themed-list-item">
-                  <a
+                  <Link
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
                   "
-                    href="/PC/"
+                    to="/PC/"
+                  >
+                    <img
+                      alt="PC"
+                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
+                      className="css-main-image themed-image"
+                    />
+                    <span className="css-image-text themed-text">PC</span>
+                  </Link>
+                </li>
+                <li className="css-listItem themed-list-item">
+                  <Link
+                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
+                    className="
+                    themed-category-card-layout
+                    css-link-categoryCardLayout
+                    themed-link
+                  "
+                    to="/PC/"
                   >
                     <img
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                       className="css-main-image themed-image"
                     />
                     <span className="css-image-text themed-text">PC</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </section>
         </div>
       </main>
+      <hr />
+      <section className="css-section themed-section">
+        <div className="css-1a8w37c themed">
+          <p className="css-text themed-text">Best sellers</p>
+          <h2 className="css-h2 themed-h2">Popular items.</h2>
+          <div className="css-1rfbk86-flexLayout themed-flex-layout">
+            <p className="css-slzyuc-text themed-text">
+              Shop our most popular products.
+            </p>
+          </div>
+        </div>
+        <ul
+          className="
+          themed-product-list-layout
+          css-list-productListLayout
+          themed-list
+        "
+        >
+          <li className="css-listItem themed-list-item">
+            <Link
+              className="
+              themed-product-card-layout
+              css-link-productCardLayout
+              themed-link
+            "
+              to="/console/"
+            >
+              <div
+                className="
+                themed-product-card-image-layout
+                css-productCardImageLayout
+              "
+              >
+                <img
+                  alt="Console"
+                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
+                  className="css-3fn981-image css-image"
+                />
+                <div className="badge themed-badge">Sale</div>
+              </div>
+              <div className="css-product themed">
+                <div className="css-1a8w37c themed">
+                  <p className="css-text themed-text">product</p>
+                  <p className="css-text themed-text">Console</p>
+                </div>
+                <div className="css-flexLayout themed-flex-layout">
+                  <p className="themed-price css-text-price themed-text">
+                    US$20.00
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </li>
+          <li className="css-listItem themed-list-item">
+            <Link
+              className="
+              themed-product-card-layout
+              css-link-productCardLayout
+              themed-link
+            "
+              to="/console/"
+            >
+              <div
+                className="
+                themed-product-card-image-layout
+                css-productCardImageLayout
+                themed
+              "
+              >
+                <img
+                  alt="Console"
+                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
+                  className="css-3fn981-image css-image"
+                />
+                <div className="badge themed-badge">Sale</div>
+              </div>
+              <div className="css-product themed">
+                <div className="css-1a8w37c themed">
+                  <p className="css-text themed-text">product</p>
+                  <p className="css-text themed-text">Console</p>
+                </div>
+                <div className="css-flexLayout themed-flex-layout">
+                  <p className="themed-price css-text-price themed-text">
+                    US$20.00
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </li>
+          <li className="css-listItem themed-list-item">
+            <Link
+              className="
+              themed-product-card-layout
+              css-link-productCardLayout
+              themed-link
+            "
+              to="/console/"
+            >
+              <div
+                className="
+                themed-product-card-image-layout
+                css-productCardImageLayout
+                themed
+              "
+              >
+                <img
+                  alt="Console"
+                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
+                  className="css-3fn981-image css-image"
+                />
+                <div className="badge themed-badge">Sale</div>
+              </div>
+              <div className="css-product themed">
+                <div className="css-1a8w37c themed">
+                  <p className="css-text themed-text">product</p>
+                  <p className="css-text themed-text">Console</p>
+                </div>
+                <div className="css-flexLayout themed-flex-layout">
+                  <p className="themed-price css-text-price themed-text">
+                    US$20.00
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </li>
+          <li className="css-listItem themed-list-item">
+            <Link
+              className="
+              themed-product-card-layout
+              css-link-productCardLayout
+              themed-link
+            "
+              to="/console/"
+            >
+              <div
+                className="
+                themed-product-card-image-layout
+                css-productCardImageLayout
+                themed
+              "
+              >
+                <img
+                  alt="Console"
+                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
+                  className="css-3fn981-image css-image"
+                />
+                <div className="badge themed-badge">Sale</div>
+              </div>
+              <div className="css-product themed">
+                <div className="css-1a8w37c themed">
+                  <p className="css-text themed-text">product</p>
+                  <p className="css-text themed-text">Console</p>
+                </div>
+                <div className="css-flexLayout themed-flex-layout">
+                  <p className="themed-price css-text-price themed-text">
+                    US$20.00
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <hr />
     </div>
   );
 }

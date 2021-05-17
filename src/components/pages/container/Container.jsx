@@ -4,9 +4,7 @@ function Container() {
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <footer />
-      </div>
+      <div className="container"></div>
     </div>
   );
 }

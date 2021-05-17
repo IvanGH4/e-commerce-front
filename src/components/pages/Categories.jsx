@@ -1,61 +1,63 @@
+import { Link } from "react-router-dom";
+
 import "../css/Categories.css";
 
 function Categories() {
   return (
     <div>
-      <nav class="css-1urqmlx-navContainer themed-nav-container">
-        <div class="themed-wide-wrapper wideWrapper themed">
-          <div class="upper-nav themed">
-            <ul class="css-navbar themed-navbar">
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/storage/">
+      <div className="css-1urqmlx-navContainer themed-nav-container">
+        <div className="themed-wide-wrapper wideWrapper themed">
+          <div className="upper-nav themed">
+            <ul className="css-navbar themed-navbar">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/storage/">
                   Consolas
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/Laptop/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/Laptop/">
                   Laptop
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/Perifericos/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/Perifericos/">
                   Perifericos
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/Retro/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/Retro/">
                   Retro
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/Audio/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/Audio/">
                   Audio
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/Pc/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/Pc/">
                   Pc
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/monitores/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/monitores/">
                   Monitores
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/sale/">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/sale/">
                   Sale
-                </a>
+                </Link>
               </li>
-              <li class="themed-navbar-item listItem-navbarItem themed-list-item">
-                <a class="css-link themed-link" href="/blog">
+              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
+                <Link className="css-link themed-link" to="/blog">
                   Sobre este Proyecto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }

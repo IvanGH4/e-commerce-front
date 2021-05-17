@@ -30,11 +30,11 @@
   gap: 48px;
 }
 
-.css-1mvatlt {
+/* .css-1mvatlt {
   margin: 0px auto;
-  /*  max-width: 600px; */
+   max-width: 600px;
   text-align: center;
-}
+} */
 
 .css-h2-text {
   line-height: 1.2;
@@ -45,6 +45,7 @@
   font-feature-settings: "cpsp", "case";
   font-size: 14px;
   font-weight: 700;
+  color: black;
 }
 
 .css-text {
@@ -75,12 +76,12 @@
 }
 
 /* @media screen and (min-width: 860px)
-.css-d4q7xr-list-categoryListLayout {
+.css-list-categoryListLayout {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 48px 32px;
 } */
 
-.css-d4q7xr-list-categoryListLayout {
+.css-list-categoryListLayout {
   padding: 0px;
   margin: 0px;
   list-style: none;

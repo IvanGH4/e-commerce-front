@@ -35,18 +35,18 @@ function Navbar() {
           </div>
         </div>
         <div className="header-social">
-          <a href="#">
+          <Link to="#">
             <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fab fa-pinterest"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

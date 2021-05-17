@@ -3,30 +3,30 @@ import "../css/Main.css";
 function Main() {
   return (
     <div>
-      <main id="main" class="css-contentLayout themed-content-layout">
-        <div class="themed-page-layout css-pageLayout themed">
-          <section class="css-section themed-section">
-            <div class="css-1mvatlt themed">
-              <h2 class="themed-text css-h2-text themed-h2">
+      <main id="main" className="css-contentLayout themed-content-layout">
+        <div className="themed-page-layout css-pageLayout themed">
+          <section className="css-section themed-section">
+            <div className=" themed">
+              <h2 className="themed-text css-h2-text themed-h2">
                 Welcome to Hack Gaming.
               </h2>
-              <p class="css-text themed-text">
+              <p className="css-text themed-text">
                 Algun Texto Super importante que vamos a poner que va a quedar
                 re bueno
               </p>
             </div>
-            <div class="css-theme themed">
+            <div className="css-theme themed">
               <ul
-                class="
+                className="
                 themed-category-list-layout
-                css-d4q7xr-list-categoryListLayout
+                css-list-categoryListLayout
                 themed-list
               "
               >
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -36,15 +36,15 @@ function Main() {
                     <img
                       alt="Consolas"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">Consolas</span>
+                    <span className="css-image-text themed-text">Consolas</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -54,15 +54,15 @@ function Main() {
                     <img
                       alt="Laptop"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">Laptop</span>
+                    <span className="css-image-text themed-text">Laptop</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -72,15 +72,17 @@ function Main() {
                     <img
                       alt="Perifericos"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">Perifericos</span>
+                    <span className="css-image-text themed-text">
+                      Perifericos
+                    </span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -90,15 +92,15 @@ function Main() {
                     <img
                       alt="Retro"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">Retro</span>
+                    <span className="css-image-text themed-text">Retro</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -108,17 +110,17 @@ function Main() {
                     <img
                       alt="Audio"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">Audio</span>
+                    <span className="css-image-text themed-text">Audio</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     id="32"
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                     __typename="Category"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -129,15 +131,15 @@ function Main() {
                       alt="PC"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
                       loading="lazy"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">PC</span>
+                    <span className="css-image-text themed-text">PC</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -147,15 +149,15 @@ function Main() {
                     <img
                       alt="PC"
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">PC</span>
+                    <span className="css-image-text themed-text">PC</span>
                   </a>
                 </li>
-                <li class="css-listItem themed-list-item">
+                <li className="css-listItem themed-list-item">
                   <a
                     image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    class="
+                    className="
                     themed-category-card-layout
                     css-link-categoryCardLayout
                     themed-link
@@ -164,9 +166,9 @@ function Main() {
                   >
                     <img
                       src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      class="css-main-image themed-image"
+                      className="css-main-image themed-image"
                     />
-                    <span class="css-image-text themed-text">PC</span>
+                    <span className="css-image-text themed-text">PC</span>
                   </a>
                 </li>
               </ul>

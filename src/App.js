@@ -8,11 +8,12 @@ import PublicRoute from "./components/PublicRoute";
 import "./App.css";
 
 function App() {
-  <div className="App">
+  return (
     <BrowserRouter>
-      <Switch>
+      <div className="App">
         <PublicRoute restricted={false} component={Container} path="/" exact />
-        {/*   <PublicRoute
+        <Switch>
+          {/*   <PublicRoute
           restricted={true}
           component={Register}
           path="/register"
@@ -20,9 +21,10 @@ function App() {
         />
         <PublicRoute restricted={true} component={Login} path="/login" exact />
         <PrivateRoute path="/edit" component={EditProducts} /> */}
-      </Switch>
+        </Switch>
+      </div>
     </BrowserRouter>
-  </div>;
+  );
 }
 
 export default App;

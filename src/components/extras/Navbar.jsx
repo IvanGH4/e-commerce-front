@@ -20,13 +20,12 @@ function Navbar() {
                 <option value="Pc">Pc</option>
               </select>
             </div>
-            <input type="search" name="" id="" placeholder="Buscar Producto">
-              <button type="submit">
-                <span>
-                  <i className="fas fa-search"></i>
-                </span>
-              </button>
-            </input>
+            <input type="search" name="" id="" placeholder="Buscar Producto" />
+            <button type="submit">
+              <span>
+                <i className="fas fa-search"></i>
+              </span>
+            </button>
           </div>
           <div className="cart-area">
             <span>

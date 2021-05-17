@@ -1,12 +1,16 @@
 import Navbar from "../../extras/Navbar";
-import Home from "../Home";
+import Categories from "../Categories";
+import Main from "../Main";
 
 function Container() {
   return (
     <div>
       <Navbar />
       <div className="container">
-        <Home />
+        <Categories />
+        <div>
+          <Main />
+        </div>
       </div>
     </div>
   );

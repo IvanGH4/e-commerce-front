@@ -1,6 +1,6 @@
-import "../css/Home.css";
+import "../css/Categories.css";
 
-function Home() {
+function Categories() {
   return (
     <div>
       <nav class="css-1urqmlx-navContainer themed-nav-container">
@@ -60,4 +60,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Categories;

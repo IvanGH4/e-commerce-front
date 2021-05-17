@@ -1,0 +1,150 @@
+.css-contentLayout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.css-root * {
+  box-sizing: border-box;
+}
+
+.css-root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgb(38, 40, 40);
+  letter-spacing: -0.018em;
+  overflow-x: visible;
+}
+
+.css-pageLayout {
+  display: grid;
+  gap: 72px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.css-section {
+  display: grid;
+  gap: 48px;
+}
+
+.css-1mvatlt {
+  margin: 0px auto;
+  /*  max-width: 600px; */
+  text-align: center;
+}
+
+.css-h2-text {
+  line-height: 1.2;
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-feature-settings: "cpsp", "case";
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.css-text {
+  display: block;
+  margin: 32px 0px 0px;
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+  color: rgb(117, 117, 117);
+  font-size: 20px;
+}
+
+.css-fk0syw {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.css-categoryListLayout {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px 24px;
+}
+
+.css-listItem {
+  padding: 0px;
+}
+
+/* @media screen and (min-width: 860px)
+.css-d4q7xr-list-categoryListLayout {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 48px 32px;
+} */
+
+.css-d4q7xr-list-categoryListLayout {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px 24px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.css-link-categoryCardLayout {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  color: rgb(117, 117, 117);
+  width: 100%;
+  min-width: 200px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.css-link-categoryCardLayout img {
+  transition-property: opacity;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.css-image-text {
+  display: block;
+  margin: 8px 0px 0px;
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.css-theme {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.css-link-categoryCardLayout {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  color: rgb(117, 117, 117);
+  width: 100%;
+  min-width: 200px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.css-main-image {
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  border-radius: 16px;
+  width: 100%;
+  height: 164px;
+}

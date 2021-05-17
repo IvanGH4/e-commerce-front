@@ -1,10 +1,13 @@
 import Navbar from "../../extras/Navbar";
+import Home from "../Home";
 
 function Container() {
   return (
     <div>
       <Navbar />
-      <div className="container"></div>
+      <div className="container">
+        <Home />
+      </div>
     </div>
   );
 }

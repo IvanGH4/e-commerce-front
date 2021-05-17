@@ -1,0 +1,50 @@
+.wideWrapper {
+  height: 100%;
+  width: calc(100% + 32px);
+  margin-left: calc(-16px);
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.upper-nav {
+  overflow: overlay;
+}
+
+.css-navbar {
+  padding: 0px;
+  margin: 0px;
+  color: rgb(38, 40, 40);
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+.listItem-navbarItem {
+  padding: 0px;
+  font-size: 12px;
+  display: inline-flex;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.css-link {
+  color: rgb(58, 60, 58);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 16px;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity;
+}

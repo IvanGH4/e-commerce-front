@@ -4,10 +4,10 @@ import "../css/Navbar.css";
 
 function Navbar() {
   return (
-    <div className="header-area">
+    <header class="header-area">
       <div className="header-padding">
         <div className="header-logo">
-          <h1>Logo</h1>
+          <h1>Hackgamming</h1>
         </div>
         <div className="header-navbar">
           <div className="header-search">
@@ -50,7 +50,7 @@ function Navbar() {
           </a>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 

@@ -5,13 +5,13 @@ import "../css/Navbar.css";
 function Navbar() {
   return (
     <header class="header-area">
-      <div className="header-padding">
+      <div className="header-padding container-img">
         <div className="header-logo">
-          <h1>Hackgamming</h1>
+          <h1>Hackgaming</h1>
         </div>
-        <div className="header-navbar">
-          <div className="header-search">
-            <div className="option-select-area">
+        <div className="header-navbar ">
+          <div className="header-search ">
+            <div className="option-select-area ">
               <select name="" id="">
                 <option value="All Category">All Category</option>
                 <option value="Mobile">Mobile</option>

@@ -7,7 +7,19 @@
 }
 
 header.header-area {
-  background: #003333;
+  background: #43679c75;
+  /* The image used */
+  background-image: url("../../assets/2021.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
 }
 
 .header-padding {
@@ -54,7 +66,7 @@ header.header-area {
   right: -50px;
   width: 40px;
   height: 40px;
-  background: #ffcc00;
+  background: #000000;
   z-index: 1;
   border-radius: 5px;
   cursor: pointer;
@@ -94,7 +106,7 @@ header.header-area {
   width: 40px;
   height: 40px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(0, 0, 0);
   line-height: 38px;
 }
 
@@ -111,4 +123,5 @@ header.header-area {
   font-size: 24px;
   background: #304a59;
   border-radius: 5px;
+  margin-left: 10px;
 }

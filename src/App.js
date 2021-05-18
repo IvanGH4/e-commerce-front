@@ -12,6 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Navbar />
         <PublicRoute restricted={false} component={Container} path="/" exact />
         <Switch>
           {/*   <PublicRoute

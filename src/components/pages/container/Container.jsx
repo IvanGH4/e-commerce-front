@@ -9,9 +9,7 @@ function Container() {
       <Navbar />
       <div className="container">
         <Categories />
-        <div>
-          <Main />
-        </div>
+        <Main />
       </div>
       <Footer />
     </div>

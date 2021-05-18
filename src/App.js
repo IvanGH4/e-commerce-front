@@ -1,4 +1,5 @@
 import Login from "./components/pages/Login";
+import Navbar from "./components/extras/Navbar";
 import Register from "./components/pages/Register";
 import Container from "./components/pages/container/Container";
 import { BrowserRouter, Switch } from "react-router-dom";

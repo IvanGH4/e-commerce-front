@@ -8,7 +8,7 @@ function Categories() {
       <div className="css-1urqmlx-navContainer themed-nav-container">
         <div className="themed-wide-wrapper wideWrapper themed">
           <div className="upper-nav themed">
-            <ul className="css-navbar themed-navbar">
+            <ul className="css-navbar themed-navbar d-flex justify-content-between flex-wrap">
               <li className="themed-navbar-item listItem-navbarItem themed-list-item">
                 <Link className="css-link themed-link" to="/storage/">
                   Consolas
@@ -47,11 +47,6 @@ function Categories() {
               <li className="themed-navbar-item listItem-navbarItem themed-list-item">
                 <Link className="css-link themed-link" to="/sale/">
                   Sale
-                </Link>
-              </li>
-              <li className="themed-navbar-item listItem-navbarItem themed-list-item">
-                <Link className="css-link themed-link" to="/blog">
-                  Sobre este Proyecto
                 </Link>
               </li>
             </ul>

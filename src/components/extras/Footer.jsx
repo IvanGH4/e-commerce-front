@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-import "../css/Navbar.css";
+import "../css/Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer pt-10 pb-5 mt-auto bg-dark footer-dark">
+    <footer className="footer pt-10 pb-5 mt-auto bg-dark footer-dark ">
       <div className="container px-5">
         <div className="row">
           <div className="col-lg-3">
-            <div className="footer-brand">SB UI Kit Pro</div>
-            <div className="mb-3">Design made easy</div>
+            <div className="footer-brand">Hack Gaming</div>
+            <div className="mb-3"> Sobre este Proyecto</div>
             <div className="icon-list-social mb-5">
               <Link className="icon-list-social-link" to="#!">
                 <i className="fab fa-instagram"></i>
@@ -63,9 +63,6 @@ function Footer() {
                   <li className="mb-2">
                     <Link to="#">Theme Customizer</Link>
                   </li>
-                  <li>
-                    <Link to="#!">UI Kit</Link>
-                  </li>
                 </ul>
               </div>
               <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
@@ -116,11 +113,10 @@ function Footer() {
           </div>
         </div>
         <hr className="my-5" />
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-between">
           <div className="col-md-6 small">Copyright © Your Website 2021</div>
-          <div className="col-md-6 text-md-end small">
+          <div className="col-md-6 small">
             <Link to="#">Privacy Policy</Link>
-
             <Link to="#">Terms Conditions</Link>
           </div>
         </div>

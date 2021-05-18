@@ -10,7 +10,7 @@ function Main() {
           <section className="css-section themed-section">
             <div className=" themed">
               <h2 className="themed-text css-h2-text themed-h2">
-                Welcome to Hack Gaming.
+                Welcome to Hack Gaming
               </h2>
               <p className="css-text themed-text">
                 Algun Texto Super importante que vamos a poner que va a quedar
@@ -19,7 +19,7 @@ function Main() {
             </div>
             <div className="css-theme themed">
               <ul
-                className="
+                className=" d-flex justify-content-around flex-wrap
                 themed-category-list-layout
                 css-list-categoryListLayout
                 themed-list
@@ -136,41 +136,6 @@ function Main() {
                     <span className="css-image-text themed-text">PC</span>
                   </Link>
                 </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/PC/"
-                  >
-                    <img
-                      alt="PC"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">PC</span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/PC/"
-                  >
-                    <img
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">PC</span>
-                  </Link>
-                </li>
               </ul>
             </div>
           </section>
@@ -179,10 +144,10 @@ function Main() {
       <hr />
       <section>
         <p className="css-text themed-text">Best sellers</p>
-        <h2 className="css-h2 themed-h2">Popular items.</h2>
+        <h2 className="css-h2 themed-h2">Popular items</h2>
         <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
-          <div className="col">
-            <div className="card popular-card">
+          <div className="col-md-4">
+            <div className="card ">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
                 className="card-img-top"
@@ -199,8 +164,8 @@ function Main() {
             </div>
           </div>
 
-          <div className="col">
-            <div className="card popular-card">
+          <div className="col-md-4">
+            <div className="card">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
                 className="card-img-top"
@@ -216,8 +181,8 @@ function Main() {
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card popular-card">
+          <div className="col-md-4">
+            <div className="card ">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
                 className="card-img-top"
@@ -228,23 +193,6 @@ function Main() {
                 <p className="card-text">
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card popular-card">
-              <img
-                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title">Producto</h5>
-                <p className="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
                 </p>
               </div>
             </div>

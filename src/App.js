@@ -1,4 +1,3 @@
-import Login from "./components/pages/Login";
 import Navbar from "./components/extras/Navbar";
 import RegisterAdmin from "./components/pages/RegisterAdmin";
 import Container from "./components/pages/container/Container";
@@ -28,7 +27,7 @@ function App() {
             path="/registroCliente"
             exact
           />
-          {/* <PublicRoute restricted={true} component={Login} path="/login" exact />
+          {/*
         <PrivateRoute path="/admin" component={admin} /> */}
         </Switch>
       </div>

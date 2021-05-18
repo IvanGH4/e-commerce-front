@@ -4,10 +4,10 @@ import "../css/Navbar.css";
 
 function Navbar() {
   return (
-    <header class="header-area">
-      <div className="header-padding container-img">
+    <header class="header-area img-fluid">
+      <div className="header-padding container-img container-fluid">
         <div className="header-logo">
-          <h1>Hackgaming</h1>
+          <h1 className="color-white">Hackgaming</h1>
         </div>
         <div className="header-navbar ">
           <div className="header-search ">
@@ -20,7 +20,12 @@ function Navbar() {
                 <option value="Pc">Pc</option>
               </select>
             </div>
-            <input type="search" name="" id="" placeholder="Buscar Producto" />
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
             <button type="submit">
               <span>
                 <i className="fas fa-search"></i>

@@ -177,167 +177,78 @@ function Main() {
         </div>
       </main>
       <hr />
-      <section className="css-section themed-section">
-        <div className="css-1a8w37c themed">
-          <p className="css-text themed-text">Best sellers</p>
-          <h2 className="css-h2 themed-h2">Popular items.</h2>
-          <div className="css-1rfbk86-flexLayout themed-flex-layout">
-            <p className="css-slzyuc-text themed-text">
-              Shop our most popular products.
-            </p>
+      <section>
+        <p class="css-text themed-text">Best sellers</p>
+        <h2 class="css-h2 themed-h2">Popular items.</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4 pt-4">
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Producto</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <ul
-          className="
-          themed-product-list-layout
-          css-list-productListLayout
-          themed-list
-        "
-        >
-          <li className="css-listItem themed-list-item">
-            <Link
-              className="
-              themed-product-card-layout
-              css-link-productCardLayout
-              themed-link
-            "
-              to="/console/"
-            >
-              <div
-                className="
-                themed-product-card-image-layout
-                css-productCardImageLayout
-              "
-              >
-                <img
-                  alt="Console"
-                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
-                  className="css-3fn981-image css-image"
-                />
-                <div className="badge themed-badge">Sale</div>
-              </div>
-              <div className="css-product themed">
-                <div className="css-1a8w37c themed">
-                  <p className="css-text themed-text">product</p>
-                  <p className="css-text themed-text">Console</p>
-                </div>
-                <div className="css-flexLayout themed-flex-layout">
-                  <p className="themed-price css-text-price themed-text">
-                    US$20.00
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="css-listItem themed-list-item">
-            <Link
-              className="
-              themed-product-card-layout
-              css-link-productCardLayout
-              themed-link
-            "
-              to="/console/"
-            >
-              <div
-                className="
-                themed-product-card-image-layout
-                css-productCardImageLayout
-                themed
-              "
-              >
-                <img
-                  alt="Console"
-                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
-                  className="css-3fn981-image css-image"
-                />
-                <div className="badge themed-badge">Sale</div>
-              </div>
-              <div className="css-product themed">
-                <div className="css-1a8w37c themed">
-                  <p className="css-text themed-text">product</p>
-                  <p className="css-text themed-text">Console</p>
-                </div>
-                <div className="css-flexLayout themed-flex-layout">
-                  <p className="themed-price css-text-price themed-text">
-                    US$20.00
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="css-listItem themed-list-item">
-            <Link
-              className="
-              themed-product-card-layout
-              css-link-productCardLayout
-              themed-link
-            "
-              to="/console/"
-            >
-              <div
-                className="
-                themed-product-card-image-layout
-                css-productCardImageLayout
-                themed
-              "
-              >
-                <img
-                  alt="Console"
-                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
-                  className="css-3fn981-image css-image"
-                />
-                <div className="badge themed-badge">Sale</div>
-              </div>
-              <div className="css-product themed">
-                <div className="css-1a8w37c themed">
-                  <p className="css-text themed-text">product</p>
-                  <p className="css-text themed-text">Console</p>
-                </div>
-                <div className="css-flexLayout themed-flex-layout">
-                  <p className="themed-price css-text-price themed-text">
-                    US$20.00
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="css-listItem themed-list-item">
-            <Link
-              className="
-              themed-product-card-layout
-              css-link-productCardLayout
-              themed-link
-            "
-              to="/console/"
-            >
-              <div
-                className="
-                themed-product-card-image-layout
-                css-productCardImageLayout
-                themed
-              "
-              >
-                <img
-                  alt="Console"
-                  src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1579288271-nintendo-switch-1579288264.jpg?crop=1xw:1xh;center,top&resize=480:*"
-                  className="css-3fn981-image css-image"
-                />
-                <div className="badge themed-badge">Sale</div>
-              </div>
-              <div className="css-product themed">
-                <div className="css-1a8w37c themed">
-                  <p className="css-text themed-text">product</p>
-                  <p className="css-text themed-text">Console</p>
-                </div>
-                <div className="css-flexLayout themed-flex-layout">
-                  <p className="themed-price css-text-price themed-text">
-                    US$20.00
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </li>
-        </ul>
       </section>
       <hr />
     </div>

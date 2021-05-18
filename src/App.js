@@ -1,12 +1,13 @@
 import Login from "./components/pages/Login";
 import Navbar from "./components/extras/Navbar";
-import Register from "./components/pages/Register";
+import RegisterAdmin from "./components/pages/RegisterAdmin";
 import Container from "./components/pages/container/Container";
 import { BrowserRouter, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import "./App.css";
+import RegisterClient from "./components/pages/RegisterClient";
 
 function App() {
   return (
@@ -15,13 +16,19 @@ function App() {
         <Navbar />
         <PublicRoute restricted={false} component={Container} path="/" exact />
         <Switch>
-          {/*   <PublicRoute
-          restricted={true}
-          component={Register}
-          path="/register"
-          exact
-        />
-        <PublicRoute restricted={true} component={Login} path="/login" exact />
+          <PublicRoute
+            restricted={false}
+            component={RegisterAdmin}
+            path="/registroAdmin"
+            exact
+          />
+          <PublicRoute
+            restricted={false}
+            component={RegisterClient}
+            path="/registroCliente"
+            exact
+          />
+          {/* <PublicRoute restricted={true} component={Login} path="/login" exact />
         <PrivateRoute path="/admin" component={admin} /> */}
         </Switch>
       </div>

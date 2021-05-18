@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#Imanges
+\src\assets
+/assets
+
 # testing
 /coverage
 

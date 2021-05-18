@@ -5,146 +5,84 @@ import "../css/Main.css";
 function Main() {
   return (
     <div>
-      <main id="main" className="css-contentLayout themed-content-layout">
-        <div className="themed-page-layout css-pageLayout themed">
-          <section className="css-section themed-section">
-            <div className=" themed">
-              <h2 className="themed-text css-h2-text themed-h2">
-                Welcome to Hack Gaming
-              </h2>
-              <p className="css-text themed-text">
-                Algun Texto Super importante que vamos a poner que va a quedar
-                re bueno
-              </p>
+      <section>
+        <h2 className="primerTitulo">Welcome to Hack Gaming</h2>
+        <p>
+          Algun Texto Super importante que vamos a poner que va a quedar re
+          bueno
+        </p>
+        <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Producto</h5>
             </div>
-            <div className="css-theme themed">
-              <ul
-                className=" d-flex justify-content-around flex-wrap
-                themed-category-list-layout
-                css-list-categoryListLayout
-                themed-list
-              "
-              >
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/Consolas/"
-                  >
-                    <img
-                      alt="Consolas"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">Consolas</span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/Laptop/"
-                  >
-                    <img
-                      alt="Laptop"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">Laptop</span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/Perifericos/"
-                  >
-                    <img
-                      alt="Perifericos"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">
-                      Perifericos
-                    </span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/Retro/"
-                  >
-                    <img
-                      alt="Retro"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">Retro</span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/Audio/"
-                  >
-                    <img
-                      alt="Audio"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">Audio</span>
-                  </Link>
-                </li>
-                <li className="css-listItem themed-list-item">
-                  <Link
-                    id="32"
-                    image="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                    className="
-                    themed-category-card-layout
-                    css-link-categoryCardLayout
-                    themed-link
-                  "
-                    to="/PC/"
-                  >
-                    <img
-                      alt="PC"
-                      src="https://mba.americaeconomia.com/sites/mba.americaeconomia.com/files/styles/article_main_image/public/field/image/reflection-pad-gaming-gamepad.jpg?itok=ASwBRLAm"
-                      className="css-main-image themed-image"
-                    />
-                    <span className="css-image-text themed-text">PC</span>
-                  </Link>
-                </li>
-              </ul>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Consolas</h5>
             </div>
-          </section>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Laptop</h5>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Perifericos</h5>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Retro</h5>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="card border-0 ">
+              <img
+                src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <h5 className="card-title">Audio</h5>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
       <hr />
       <section>
-        <p className="css-text themed-text">Best sellers</p>
-        <h2 className="css-h2 themed-h2">Popular items</h2>
+        <p className="primerTitulo">Best sellers</p>
+        <h2 className="css-h2">Popular items</h2>
         <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
           <div className="col-md-4">
             <div className="card ">

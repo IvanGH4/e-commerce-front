@@ -4,33 +4,47 @@ import "../css/Navbar.css";
 
 function Navbar() {
   return (
-    <header class="header-area img-fluid">
-      <div className="header-padding container-img container-fluid">
-        <div className="header-logo">
-          <h1 className="color-white">Hackgaming</h1>
-        </div>
-        <div className="header-navbar ">
-          <div className="header-search ">
-            <div className="option-select-area ">
-              <select name="" id="">
-                <option value="All Category">All Category</option>
-                <option value="Mobile">Mobile</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Tablet">Tablet</option>
-                <option value="Pc">Pc</option>
-              </select>
-            </div>
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button type="submit">
-              <span>
-                <i className="fas fa-search"></i>
-              </span>
-            </button>
+    <header className="header-area img-fluid">
+      <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="#">
+            Hack Gaming
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="#">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">
+                  Link
+                </Link>
+              </li>
+            </ul>
+            <form className="d-flex justify-content-center">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
           <div className="cart-area">
             <span>
@@ -39,21 +53,7 @@ function Navbar() {
             <span>0</span>
           </div>
         </div>
-        <div className="header-social">
-          <Link to="#">
-            <i className="fab fa-facebook"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-twitter"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-instagram"></i>
-          </Link>
-          <Link to="#">
-            <i className="fab fa-pinterest"></i>
-          </Link>
-        </div>
-      </div>
+      </nav>
     </header>
   );
 }

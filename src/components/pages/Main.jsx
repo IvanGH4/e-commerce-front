@@ -178,19 +178,19 @@ function Main() {
       </main>
       <hr />
       <section>
-        <p class="css-text themed-text">Best sellers</p>
-        <h2 class="css-h2 themed-h2">Popular items.</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4 pt-4">
-          <div class="col">
-            <div class="card">
+        <p className="css-text themed-text">Best sellers</p>
+        <h2 className="css-h2 themed-h2">Popular items.</h2>
+        <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
+          <div className="col">
+            <div className="card popular-card">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title">Producto</h5>
+                <p className="card-text">
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
                   longer.
@@ -198,16 +198,17 @@ function Main() {
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
+
+          <div className="col">
+            <div className="card popular-card">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title">Producto</h5>
+                <p className="card-text">
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
                   longer.
@@ -215,32 +216,32 @@ function Main() {
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
+          <div className="col">
+            <div className="card popular-card">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title">Producto</h5>
+                <p className="card-text">
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
+          <div className="col">
+            <div className="card popular-card">
               <img
                 src="https://http2.mlstatic.com/D_NQ_NP_802890-MLU45859870093_052021-O.webp"
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title">Producto</h5>
+                <p className="card-text">
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
                   longer.

@@ -8,6 +8,7 @@ import PublicRoute from "./components/PublicRoute";
 import "./App.css";
 import RegisterClient from "./components/pages/RegisterClient";
 import Login from "./components/pages/Login";
+import ProductsList from "./components/pages/ProductsList";
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
             component={Login}
             path="/iniciarSesion"
             exact
+          />
+          <PublicRoute
+            component={ProductsList}
+            path="/shop"
+            restricted={true}
           />
           {/*
         <PrivateRoute path="/admin" component={admin} /> */}

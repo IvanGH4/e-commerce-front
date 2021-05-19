@@ -29,7 +29,7 @@ function Navbar() {
                 <NavLink
                   className="nav-link"
                   activeClassName="active"
-                  to="/productList"
+                  to="/shop"
                 >
                   Shop
                 </NavLink>

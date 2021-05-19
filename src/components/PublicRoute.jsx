@@ -4,7 +4,7 @@ import { Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const PublicRoute = ({ component: Component, restricted, ...rest }) => {
-  // const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
 
   return (
     // restricted = false meaning public route
@@ -12,7 +12,11 @@ const PublicRoute = ({ component: Component, restricted, ...rest }) => {
     <Route
       {...rest}
       render={(props) =>
-        restricted ? <Redirect to="/login" /> : <Component {...props} />
+        restricted && !user ? (
+          <Redirect to="/login" />
+        ) : (
+          <Component {...props} />
+        )
       }
     />
   );

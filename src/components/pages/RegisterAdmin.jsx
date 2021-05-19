@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/userActions";
+import { useHistory } from "react-router-dom";
 
 function RegisterAdmin() {
   const [firstName, setFirstName] = useState("");
@@ -10,11 +11,12 @@ function RegisterAdmin() {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:3000/admins",
+      process.env.REACT_APP_API_URL + "/admins",
       {
         firstname: firstName,
         lastname: lastName,
@@ -24,6 +26,8 @@ function RegisterAdmin() {
       { headers: { "Content-Type": "application/json" } }
     );
     dispatch(setUser(response.data));
+    history.push("/");
+    //esto va a ser dashboard despues
   };
 
   return (

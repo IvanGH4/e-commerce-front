@@ -18,7 +18,7 @@ function RegisterClient() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:3000/clients",
+      (process.env.REACT_APP_API_URL = "/clients"),
       {
         firstname: firstName,
         lastname: lastName,

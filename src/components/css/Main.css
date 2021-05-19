@@ -9,5 +9,11 @@
 }
 
 .primerTitulo {
-  padding-top: 30px;
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: black;
+  
 }

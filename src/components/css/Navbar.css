@@ -2,10 +2,19 @@ h1 {
   color: #fff;
 }
 
+.my-brand-style{
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  
+}
+
 header.header-area {
   /* The image used */
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../../assets/2021.jpg");
+    url("../../assets/portada.jpg");
 
   min-height: 500px;
 

@@ -6,7 +6,7 @@ function Main() {
   return (
     <div>
       <section>
-        <h2 className="primerTitulo">Welcome to Hack Gaming</h2>
+        <h2 className="primerTitulo my-4">Bienvenidos a HackGaming</h2>
         <p>
           Algun Texto Super importante que vamos a poner que va a quedar re
           bueno
@@ -81,8 +81,8 @@ function Main() {
       </section>
       <hr />
       <section>
-        <p className="primerTitulo">Best sellers</p>
-        <h2 className="css-h2">Popular items</h2>
+        <p className="pt-3">Best sellers</p>
+        <h2 className="css-h2">Productos más vendidos</h2>
         <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
           <div className="col-md-4">
             <div className="card ">

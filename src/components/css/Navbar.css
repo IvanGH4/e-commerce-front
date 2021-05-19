@@ -4,8 +4,14 @@ h1 {
 
 header.header-area {
   /* The image used */
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../../assets/2021.jpg");
+  background: rgb(0, 200, 150);
+  background: linear-gradient(
+      90deg,
+      rgba(0, 200, 150, 0.5410539215686274) 0%,
+      rgba(164, 215, 198, 0.6362920168067228) 16%,
+      rgba(108, 108, 108, 0.7091211484593838) 100%
+    ),
+    url("../../assets/newfondo.jpg");
 
   min-height: 500px;
 

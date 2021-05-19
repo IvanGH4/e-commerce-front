@@ -19,8 +19,8 @@ function Navbar() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <NavLink className="navbar-brand" to="/">
-              Hack Gaming
+            <NavLink className="navbar-brand my-brand-style" to="/">
+              HackGaming
             </NavLink>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">

@@ -58,6 +58,11 @@ function Navbar() {
             </form>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
+                <NavLink className="nav-link" to="/productList">
+                  Shop
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <button
                   className="nav-link btn text-dark"
                   data-bs-toggle="modal"
@@ -67,8 +72,13 @@ function Navbar() {
                 </button>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="#">
+                <NavLink className="nav-link" to="/registroCliente">
                   Registrarse
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/registroAdmin">
+                  Registrarse Admin
                 </NavLink>
               </li>
               <li className="nav-item">

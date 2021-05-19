@@ -10,7 +10,7 @@ function Categories() {
           <div className="upper-nav themed">
             <ul className="css-navbar themed-navbar d-flex justify-content-between flex-wrap">
               <li className="themed-navbar-item listItem-navbarItem themed-list-item">
-                <Link className="css-link themed-link" to="/storage/">
+                <Link className="css-link themed-link" to="/Consolas/">
                   Consolas
                 </Link>
               </li>

@@ -1,11 +1,14 @@
 /* Texto lindo */
+body{
+  color: #474554;
+}
 .css-h2 {
   font-size: 48px;
   font-weight: 800;
   margin: 0px;
   line-height: 1;
   letter-spacing: -0.05em;
-  color: black;
+ /*  color: black; */
 }
 
 .primerTitulo {

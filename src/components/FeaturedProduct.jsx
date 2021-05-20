@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 function FeaturedProduct({ product }) {
   return (
     <div className="col-md-4 cardglobal">
-      <Link to={`/productos/${product.slug}`}>
+      <Link
+        className="text-decoration-none text-dark"
+        to={`/productos/${product.slug}`}
+      >
         <div className="card border-0">
           <div className="categorycard-img img-fluid">
             <img

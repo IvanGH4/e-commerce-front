@@ -1,10 +1,31 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/userActions";
 
 import "../css/Navbar.css";
 
 function Navbar() {
+  const location = useLocation();
+
+  const dispatch = useDispatch();
+
+  const user = useSelector((state) => state.user);
+
+  const history = useHistory();
+
   return (
-    <header className="header-area img-fluid">
+    <header
+      className={`${
+        location.pathname === "/"
+          ? "portada-home"
+          : location.pathname === "/shop"
+          ? "portada-shop"
+          : location.pathname === "/productos" ||
+            location.pathname === "/productos/:slug"
+          ? "portada-product"
+          : "portada-login-register"
+      } img-fluid`}
+    >
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <div className="d-flex align-items-center justify-content-between">
@@ -34,36 +55,53 @@ function Navbar() {
                   Shop
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/iniciarSesion"
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  Login
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  activeClassName="active"
-                  to="/registroCliente"
-                >
-                  Registrarse
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  activeClassName="active"
-                  to="/registroAdmin"
-                >
-                  Registrarse Admin
-                </NavLink>
-              </li>
+
+              {!user ? (
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      to="/iniciarSesion"
+                      className="nav-link"
+                      activeClassName="active"
+                    >
+                      Login
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      to="/registroCliente"
+                    >
+                      Registrarse
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      to="/registroAdmin"
+                    >
+                      Registrarse Admin
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <li className="nav-item">
+                  <button
+                    className="nav-link btn"
+                    onClick={() => {
+                      dispatch(logout());
+                      history.push("/");
+                    }}
+                  >
+                    Cerrar Sesión
+                  </button>
+                </li>
+              )}
               <li className="nav-item">
                 <Link className="nav-link" to="#">
-                  <i className="fas fa-shopping-basket"></i>
+                  <i class="fas fa-cart-plus"></i>
                   <span>0</span>
                 </Link>
               </li>

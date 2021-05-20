@@ -29,7 +29,7 @@ function Footer() {
             <div className="row">
               <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div className="text-uppercase-expanded text-xs mb-4">
-                  Product
+                  Nela Sandes
                 </div>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2">
@@ -41,17 +41,11 @@ function Footer() {
                   <li className="mb-2">
                     <Link to="#">Sections</Link>
                   </li>
-                  <li className="mb-2">
-                    <Link to="#">Documentation</Link>
-                  </li>
-                  <li>
-                    <Link to="#">Changelog</Link>
-                  </li>
                 </ul>
               </div>
               <div className="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div className="text-uppercase-expanded text-xs mb-4">
-                  Technical
+                  Iván García
                 </div>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2">
@@ -67,7 +61,7 @@ function Footer() {
               </div>
               <div className="col-lg-3 col-md-6 mb-5 mb-md-0">
                 <div className="text-uppercase-expanded text-xs mb-4">
-                  Includes
+                  Ignacio Carricart
                 </div>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2">
@@ -79,23 +73,11 @@ function Footer() {
                   <li className="mb-2">
                     <Link to="#">Layouts</Link>
                   </li>
-                  <li className="mb-2">
-                    <Link to="#">Code Samples</Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link to="#">Products</Link>
-                  </li>
-                  <li className="mb-2">
-                    <Link to="#">Affiliates</Link>
-                  </li>
-                  <li>
-                    <Link to="#">Updates</Link>
-                  </li>
                 </ul>
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="text-uppercase-expanded text-xs mb-4">
-                  Legal
+                  Hack Academy
                 </div>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2">
@@ -106,45 +88,6 @@ function Footer() {
                   </li>
                   <li>
                     <Link to="#">License</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col ">
-            <div class="">
-              <div class="hdr">
-                <div class="tit">Compra online con:</div>
-              </div>
-              <div class="cnt">
-                <ul class="d-inline d-flex list-unstyled justify-content-between flex-column flex-md-row">
-                  <li class="fs-3">
-                    <i class="fab fa-cc-visa text-white"></i>
-                  </li>
-                  <li class="fs-3">
-                    <i class="fab fa-cc-mastercard text-white"></i>
-                  </li>
-                  <li class="fs-3">
-                    <i class="fab fa-cc-diners-club text-white"></i>
-                  </li>
-                  <li class="fs-3">
-                    <i class="fab fa-cc-paypal text-white"></i>
-                  </li>
-
-                  <li class="fs-3">
-                    <img
-                      src="https://s.fenicio.app/logos/b/abitab.svg"
-                      alt="abitab"
-                      height="20"
-                    />
-                  </li>
-                  <li class="fs-3">
-                    <img
-                      src="https://s.fenicio.app/logos/b/redpagos.svg"
-                      alt="redpagos"
-                      height="20"
-                    />
                   </li>
                 </ul>
               </div>

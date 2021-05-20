@@ -1,6 +1,4 @@
-h1 {
-  color: #fff;
-}
+
 
 .my-brand-style {
   font-size: 1.5rem;
@@ -10,7 +8,7 @@ h1 {
   letter-spacing: -0.05em;
 }
 
-header.header-area {
+header.portada-home {
   /* The image used */
     background: rgb(108,108,108);
     background: radial-gradient(
@@ -18,6 +16,63 @@ header.header-area {
       rgba(108,108,108,0.5021358885351015) 0%, 
       rgba(0,154,165,0.5021358885351015) 100%),
       url("../../assets/newfondo.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+header.portada-shop {
+  /* The image used */
+    background: rgb(108,108,108);
+    background: radial-gradient(
+      circle, 
+      rgba(108,108,108,0.5021358885351015) 0%, 
+      rgba(0,154,165,0.5021358885351015) 100%),
+      url("../../assets/portada-shop.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+header.portada-login-register {
+  /* The image used */
+    background: rgb(108,108,108);
+    background: radial-gradient(
+      circle, 
+      rgba(108,108,108,0.5021358885351015) 0%, 
+      rgba(0,154,165,0.5021358885351015) 100%),
+      url("../../assets/portada-login-register.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+header.portada-product {
+  /* The image used */
+    background: rgb(108,108,108);
+    background: radial-gradient(
+      circle, 
+      rgba(108,108,108,0.5021358885351015) 0%, 
+      rgba(0,154,165,0.5021358885351015) 100%),
+      url("../../assets/portada-product.jpg");
 
   min-height: 500px;
 

@@ -111,7 +111,47 @@ function Footer() {
               </div>
             </div>
           </div>
+
+          <div class="col ">
+            <div class="">
+              <div class="hdr">
+                <div class="tit">Compra online con:</div>
+              </div>
+              <div class="cnt">
+                <ul class="d-inline d-flex list-unstyled justify-content-between flex-column flex-md-row">
+                  <li class="fs-3">
+                    <i class="fab fa-cc-visa text-white"></i>
+                  </li>
+                  <li class="fs-3">
+                    <i class="fab fa-cc-mastercard text-white"></i>
+                  </li>
+                  <li class="fs-3">
+                    <i class="fab fa-cc-diners-club text-white"></i>
+                  </li>
+                  <li class="fs-3">
+                    <i class="fab fa-cc-paypal text-white"></i>
+                  </li>
+
+                  <li class="fs-3">
+                    <img
+                      src="https://s.fenicio.app/logos/b/abitab.svg"
+                      alt="abitab"
+                      height="20"
+                    />
+                  </li>
+                  <li class="fs-3">
+                    <img
+                      src="https://s.fenicio.app/logos/b/redpagos.svg"
+                      alt="redpagos"
+                      height="20"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+
         <hr className="my-5" />
         <div className="row align-items-center justify-content-between">
           <div className="col-md-6 small">Copyright © Your Website 2021</div>

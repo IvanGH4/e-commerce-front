@@ -73,3 +73,7 @@
     transform: rotate(270deg);
   }
 }
+
+.cell {
+  margin-left: 100%;
+}

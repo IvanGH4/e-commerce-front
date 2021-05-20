@@ -26,10 +26,13 @@ function SingleProduct() {
       setLoading(false);
     };
     getProduct();
+  }, []);
+
+  useEffect(() => {
     for (let i = 1; i <= product.stock; i++) {
       setProductStock((prevState) => [...prevState, i]);
     }
-  }, []);
+  }, [product]);
 
   return (
     <div className="container">

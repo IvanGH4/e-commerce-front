@@ -8,9 +8,9 @@ function Main() {
     <div>
       <section>
         <h2 className="primerTitulo my-4">Bienvenidos a HackGaming</h2>
-        <p>
-          Algun Texto Super importante que vamos a poner que va a quedar re
-          bueno
+        <p className="fs-4">
+          Todo lo que necesitás para mejorar tu experiencia mientras jugás a tus
+          juegos favoritos.
         </p>
         <div className="row row-cols-1 row-cols-md-2 g-4 pt-4 my-3 ">
           <CategoriesList />

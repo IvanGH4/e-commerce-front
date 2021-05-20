@@ -22,9 +22,11 @@ function CategoriesList() {
       {loading ? (
         <Loader />
       ) : (
-        categories.map((category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))
+        categories
+          .slice(0, 6)
+          .map((category) => (
+            <CategoryCard key={category.id} category={category} />
+          ))
       )}
     </>
   );

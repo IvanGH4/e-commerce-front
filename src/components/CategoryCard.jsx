@@ -11,7 +11,7 @@ function CategoryCard({ category }) {
             alt="{category.name}"
           />
         </div>
-        <h5 className="card-title">{category.name.toUpperCase()}</h5>
+        <h5 className="card-title fs-5">{category.name.toUpperCase()}</h5>
       </div>
     </div>
   );

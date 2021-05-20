@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CategoryCard from "../CategoryCard";
 
 import "../css/Main.css";
 

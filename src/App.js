@@ -8,8 +8,9 @@ import PublicRoute from "./components/PublicRoute";
 import "./App.css";
 import RegisterClient from "./components/pages/RegisterClient";
 import Login from "./components/pages/Login";
-import ProductsList from "./components/pages/ProductsList";
-import SingleProduct from "./components/pages/SingleProduct";
+import ProductsList from "./components/ProductsList";
+import SingleProduct from "./components/SingleProduct";
+import Shop from "./components/pages/Shop";
 
 function App() {
   return (
@@ -36,11 +37,7 @@ function App() {
             path="/iniciarSesion"
             exact
           />
-          <PublicRoute
-            component={ProductsList}
-            path="/shop"
-            restricted={true}
-          />
+          <PublicRoute component={Shop} path="/shop" restricted={false} />
           <PublicRoute
             component={SingleProduct}
             path="/productos/:slug"

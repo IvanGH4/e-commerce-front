@@ -17,14 +17,13 @@ function Main() {
         </div>
       </section>
       <hr />
-      <section>
+      <section className="my-4">
         <p className="pt-3">Best sellers</p>
         <h2 className="css-h2">Productos más vendidos</h2>
         <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
           <FeaturedProductList />
         </div>
       </section>
-      <hr />
     </div>
   );
 }

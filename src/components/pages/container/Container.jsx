@@ -1,5 +1,5 @@
 import Footer from "../../extras/Footer";
-import Categories from "../Categories";
+import Categories from "../../extras/Categories";
 import Main from "../Main";
 
 function Container() {

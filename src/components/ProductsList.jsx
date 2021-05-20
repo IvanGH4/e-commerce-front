@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 
 function ProductsList() {
-  const user = useSelector((state) => state.user);
-
-  const dispatch = useDispatch();
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -13,12 +11,11 @@ function ProductsList() {
         process.env.REACT_APP_API_URL + "/products",
         {
           headers: {
-            Authorization: `Bearer ${user.token}`,
             "Content-Type": "application/json",
           },
         }
       );
-      console.log(response.data);
+      setProducts(response.data);
     };
     getProducts();
   }, []);

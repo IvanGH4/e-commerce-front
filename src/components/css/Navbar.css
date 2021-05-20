@@ -12,14 +12,12 @@ h1 {
 
 header.header-area {
   /* The image used */
-  background: rgb(0, 200, 150);
-  background: linear-gradient(
-      90deg,
-      rgba(0, 200, 150, 0.5410539215686274) 0%,
-      rgba(164, 215, 198, 0.6362920168067228) 16%,
-      rgba(108, 108, 108, 0.7091211484593838) 100%
-    ),
-    url("../../assets/newfondo.jpg");
+    background: rgb(108,108,108);
+    background: radial-gradient(
+      circle, 
+      rgba(108,108,108,0.5021358885351015) 0%, 
+      rgba(0,154,165,0.5021358885351015) 100%),
+      url("../../assets/newfondo.jpg");
 
   min-height: 500px;
 

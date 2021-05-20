@@ -8,7 +8,7 @@ function CategoryCard({ category }) {
           <img
             src={category.img}
             className="card-img-top"
-            alt="{category.name}"
+            alt={category.name}
           />
         </div>
         <h5 className="card-title fs-5">{category.name.toUpperCase()}</h5>

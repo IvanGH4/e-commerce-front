@@ -9,6 +9,7 @@ import "./App.css";
 import RegisterClient from "./components/pages/RegisterClient";
 import Login from "./components/pages/Login";
 import ProductsList from "./components/pages/ProductsList";
+import SingleProduct from "./components/pages/SingleProduct";
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
             component={ProductsList}
             path="/shop"
             restricted={true}
+          />
+          <PublicRoute
+            component={SingleProduct}
+            path="/productos/:slug"
+            restricted={false}
           />
           {/*
         <PrivateRoute path="/admin" component={admin} /> */}

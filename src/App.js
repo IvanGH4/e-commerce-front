@@ -12,6 +12,7 @@ import ProductsList from "./components/ProductsList";
 import SingleProduct from "./components/SingleProduct";
 import Shop from "./components/pages/Shop";
 import CategoryProducts from "./components/pages/CategoryProducts";
+import Cart from "./components/pages/Cart";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             path="/categorias/:id"
             restricted={false}
           />
+          <PublicRoute component={Cart} path="/carrito" restricted={false} />
           {/*
         <PrivateRoute path="/admin" component={admin} /> */}
         </Switch>

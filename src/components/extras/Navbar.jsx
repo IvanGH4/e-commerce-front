@@ -13,6 +13,8 @@ function Navbar() {
 
   const history = useHistory();
 
+  const cart = useSelector((state) => state.cart);
+
   return (
     <header
       className={`${
@@ -20,8 +22,7 @@ function Navbar() {
           ? "portada-home"
           : location.pathname === "/shop"
           ? "portada-shop"
-          : location.pathname === "/productos" ||
-            location.pathname === "/productos/:slug"
+          : location.pathname.match("/productos")
           ? "portada-product"
           : "portada-login-register"
       } img-fluid`}
@@ -100,10 +101,14 @@ function Navbar() {
                 </li>
               )}
               <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <NavLink
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/carrito"
+                >
                   <i class="fas fa-cart-plus"></i>
-                  <span>0</span>
-                </Link>
+                  <span>{cart.length}</span>
+                </NavLink>
               </li>
             </ul>
           </div>

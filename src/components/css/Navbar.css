@@ -1,5 +1,3 @@
-
-
 .my-brand-style {
   font-size: 1.5rem;
   font-weight: 800;
@@ -10,12 +8,13 @@
 
 header.portada-home {
   /* The image used */
-    background: rgb(108,108,108);
-    background: radial-gradient(
-      circle, 
-      rgba(108,108,108,0.5021358885351015) 0%, 
-      rgba(0,154,165,0.5021358885351015) 100%),
-      url("../../assets/newfondo.jpg");
+  background: rgb(108, 108, 108);
+  background: radial-gradient(
+      circle,
+      rgba(108, 108, 108, 0.5021358885351015) 0%,
+      rgba(0, 154, 165, 0.5021358885351015) 100%
+    ),
+    url("../../assets/newfondo.jpg");
 
   min-height: 500px;
 
@@ -28,14 +27,29 @@ header.portada-home {
   position: relative;
 }
 
+header.portada-home::after {
+  content: "Bienvenidos a HackGaming";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
 header.portada-shop {
   /* The image used */
-    background: rgb(108,108,108);
-    background: radial-gradient(
-      circle, 
-      rgba(108,108,108,0.5021358885351015) 0%, 
-      rgba(0,154,165,0.5021358885351015) 100%),
-      url("../../assets/portada-shop.jpg");
+  background: rgb(108, 108, 108);
+  background: radial-gradient(
+      circle,
+      rgba(108, 108, 108, 0.5021358885351015) 0%,
+      rgba(0, 154, 165, 0.5021358885351015) 100%
+    ),
+    url("../../assets/portada-shop.jpg");
 
   min-height: 500px;
 
@@ -46,14 +60,29 @@ header.portada-shop {
   position: relative;
 }
 
+header.portada-shop::after {
+  content: "Encuentra tus productos favoritos";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
 header.portada-login-register {
   /* The image used */
-    background: rgb(108,108,108);
-    background: radial-gradient(
-      circle, 
-      rgba(108,108,108,0.5021358885351015) 0%, 
-      rgba(0,154,165,0.5021358885351015) 100%),
-      url("../../assets/portada-login-register.jpg");
+  background: rgb(108, 108, 108);
+  background: radial-gradient(
+      circle,
+      rgba(108, 108, 108, 0.5021358885351015) 0%,
+      rgba(0, 154, 165, 0.5021358885351015) 100%
+    ),
+    url("../../assets/portada-login-register.jpg");
 
   min-height: 500px;
 
@@ -67,12 +96,13 @@ header.portada-login-register {
 
 header.portada-product {
   /* The image used */
-    background: rgb(108,108,108);
-    background: radial-gradient(
-      circle, 
-      rgba(108,108,108,0.5021358885351015) 0%, 
-      rgba(0,154,165,0.5021358885351015) 100%),
-      url("../../assets/portada-product.jpg");
+  background: rgb(108, 108, 108);
+  background: radial-gradient(
+      circle,
+      rgba(108, 108, 108, 0.5021358885351015) 0%,
+      rgba(0, 154, 165, 0.5021358885351015) 100%
+    ),
+    url("../../assets/portada-product.jpg");
 
   min-height: 500px;
 
@@ -83,4 +113,18 @@ header.portada-product {
 
   /* Needed to position the navbar */
   position: relative;
+}
+
+header.portada-product::after {
+  content: "Qué esperas para comprarlo?";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }

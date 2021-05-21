@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "./extras/Loader";
 import { useParams } from "react-router-dom";
+import { addItem } from "../redux/cartActions";
+import { useDispatch } from "react-redux";
+import { useToasts } from "react-toast-notifications";
 
 function SingleProduct() {
   const [product, setProduct] = useState({});
@@ -9,7 +12,22 @@ function SingleProduct() {
   const [productStock, setProductStock] = useState([]);
   const [productQuantity, setProductQuantity] = useState(1);
 
+  const dispatch = useDispatch();
   const { slug } = useParams();
+  const { addToast } = useToasts();
+
+  const handleClick = () => {
+    const itemToCart = {
+      product,
+      productQuantity: Number(productQuantity),
+      totalPrice: product.price * Number(productQuantity),
+    };
+    dispatch(addItem(itemToCart));
+    addToast("Producto añadido al carrito!", {
+      appearance: "success",
+      autoDismiss: true,
+    });
+  };
 
   useEffect(() => {
     setProductStock([]);
@@ -126,7 +144,7 @@ function SingleProduct() {
                 );
               })}
             </select>
-            <button className="btn">
+            <button className="btn" onClick={handleClick}>
               {" "}
               Agregar al Carrito <i class="fas fa-cart-plus"></i>{" "}
             </button>

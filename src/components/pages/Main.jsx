@@ -7,8 +7,8 @@ function Main() {
   return (
     <div>
       <section>
-        <h2 className="primerTitulo my-4">Bienvenidos a HackGaming</h2>
-        <p className="fs-4">
+        {/* <h2 className="primerTitulo my-4">Bienvenidos a HackGaming</h2> */}
+        <p className="fs-4 my-5">
           Todo lo que necesitás para mejorar tu experiencia mientras jugás a tus
           juegos favoritos.
         </p>

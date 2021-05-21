@@ -39,7 +39,7 @@ function ProductsList({ categoryFilter }) {
       ) : (
         products.map((product) => {
           return (
-            <div className="col-12 cardglobal my-5">
+            <div className="col-12 cardglobal my-5" key={product.id}>
               <div className="row">
                 <div className="col-md-6">
                   <div className="card-body">

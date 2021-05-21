@@ -37,7 +37,9 @@ function SingleProduct() {
   return (
     <div className="container">
       {loading ? (
-        <Loader />
+        <div className="d-flex justify-content-center mt-5">
+          <Loader />
+        </div>
       ) : (
         <div className="row my-5">
           <div className="col-md-4 my-4">

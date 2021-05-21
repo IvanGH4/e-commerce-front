@@ -11,6 +11,7 @@ import Login from "./components/pages/Login";
 import ProductsList from "./components/ProductsList";
 import SingleProduct from "./components/SingleProduct";
 import Shop from "./components/pages/Shop";
+import CategoryProducts from "./components/pages/CategoryProducts";
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
           <PublicRoute
             component={SingleProduct}
             path="/productos/:slug"
+            restricted={false}
+          />
+          <PublicRoute
+            component={CategoryProducts}
+            path="/categorias/:id"
             restricted={false}
           />
           {/*

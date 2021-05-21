@@ -25,7 +25,7 @@ function FeaturedProductList() {
         <Loader />
       ) : (
         products
-          .slice(0, 4)
+          .slice(0, 3)
           .map((product) => (
             <FeaturedProduct key={product.id} product={product} />
           ))

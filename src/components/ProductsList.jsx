@@ -34,7 +34,7 @@ function ProductsList({ categoryFilter }) {
         products
           .filter((item) => item.categoryId == categoryFilter)
           .map((product) => {
-            return <ProductCard product={product} />;
+            return <ProductCard key={product.id} product={product} />;
           })
       ) : (
         products.map((product) => {

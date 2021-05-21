@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem } from "../../redux/cartActions";
+import { removeItem, increaseQty, decreaseQty } from "../../redux/cartActions";
 import { useToasts } from "react-toast-notifications";
 
 function Cart() {
@@ -28,18 +28,36 @@ function Cart() {
                         <h5 className="card-title">{item.product.name}</h5>
                         <p>Cantidad: {item.productQuantity}</p>
                         <p>Total: ${item.totalPrice}</p>
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => {
-                            dispatch(removeItem(item.product.id));
-                            addToast("Producto quitado del carrito", {
-                              appearance: "success",
-                              autoDismiss: true,
-                            });
-                          }}
-                        >
-                          Quitar
-                        </button>
+                        <div className="d-flex align-items-center justify-content-around">
+                          <button
+                            className="btn"
+                            onClick={() =>
+                              dispatch(decreaseQty(item.product.id))
+                            }
+                          >
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              dispatch(removeItem(item.product.id));
+                              addToast("Producto quitado del carrito", {
+                                appearance: "success",
+                                autoDismiss: true,
+                              });
+                            }}
+                          >
+                            Quitar
+                          </button>
+                          <button
+                            className="btn"
+                            onClick={() =>
+                              dispatch(increaseQty(item.product.id))
+                            }
+                          >
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

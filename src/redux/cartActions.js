@@ -11,3 +11,17 @@ export const removeItem = (id) => {
     payload: id,
   };
 };
+
+export const increaseQty = (id) => {
+  return {
+    type: "INCREASE_QTY",
+    payload: id,
+  };
+};
+
+export const decreaseQty = (id) => {
+  return {
+    type: "DECREASE_QTY",
+    payload: id,
+  };
+};

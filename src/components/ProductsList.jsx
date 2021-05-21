@@ -60,7 +60,7 @@ function ProductsList({ categoryFilter }) {
                 <div className="col-md-6 d-flex align-items-center justify-content-center flex-column">
                   <p className="fs-3">${product.price}</p>
                   <Link
-                    className="text-decoration-none text-dark btn btn-success"
+                    className="text-decoration-none btn btn-success"
                     to={`/productos/${product.slug}`}
                   >
                     Quiero este producto

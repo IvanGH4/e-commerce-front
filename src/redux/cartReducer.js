@@ -45,6 +45,8 @@ const cartReducer = (state = [], action) => {
           draft.splice(idxOfItem, 1);
         }
       });
+    case "CLEAR_CART":
+      return [];
     default:
       return state;
   }

@@ -25,3 +25,9 @@ export const decreaseQty = (id) => {
     payload: id,
   };
 };
+
+export const clearCart = () => {
+  return {
+    type: "CLEAR_CART",
+  };
+};

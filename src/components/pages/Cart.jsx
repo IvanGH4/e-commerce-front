@@ -1,5 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeItem, increaseQty, decreaseQty } from "../../redux/cartActions";
+import {
+  removeItem,
+  increaseQty,
+  decreaseQty,
+  clearCart,
+} from "../../redux/cartActions";
 import { useToasts } from "react-toast-notifications";
 
 function Cart() {
@@ -65,7 +70,35 @@ function Cart() {
               })
             : "No hay productos en tu carrito!"}
           <hr />
-          <button className="btn btn-success my-5">Proceder a la compra</button>
+          {cart.length > 0 && (
+            <div className="d-grid gap-2 mb-3">
+              <p className="text-start fs-4">Finaliza tu compra</p>
+              <button
+                className="btn btn-success"
+                onClick={() => {
+                  dispatch(clearCart());
+                  addToast(
+                    "Gracias por tu compra! Se te ha enviado un email con la verificación.",
+                    { appearance: "success", autoDismiss: true }
+                  );
+                }}
+              >
+                <span>Pagar con MercadoPago</span>
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={() => {
+                  dispatch(clearCart());
+                  addToast(
+                    "Gracias por tu compra! Se te ha enviado un email con la verificación.",
+                    { appearance: "success", autoDismiss: true }
+                  );
+                }}
+              >
+                <span>Pagar con PayPal</span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

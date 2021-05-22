@@ -128,3 +128,7 @@ header.portada-product::after {
   line-height: 1;
   letter-spacing: -0.05em;
 }
+
+header.portada-cart {
+  background: none;
+}

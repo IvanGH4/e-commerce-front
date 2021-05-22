@@ -3,6 +3,7 @@ import axios from "axios";
 import Loader from "../extras/Loader";
 import ProductCard from "../ProductCard";
 import { useParams } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 function CategoryProducts() {
   const [products, setProducts] = useState([]);
@@ -36,7 +37,11 @@ function CategoryProducts() {
         <div className="row">
           {products &&
             products.map((product) => {
-              return <ProductCard product={product} />;
+              return (
+                <Fade right>
+                  <ProductCard product={product} />
+                </Fade>
+              );
             })}
         </div>
       )}

@@ -24,6 +24,8 @@ function Navbar() {
           ? "portada-shop"
           : location.pathname.match("/productos")
           ? "portada-product"
+          : location.pathname === "/carrito"
+          ? "portada-cart"
           : "portada-login-register"
       } img-fluid`}
     >

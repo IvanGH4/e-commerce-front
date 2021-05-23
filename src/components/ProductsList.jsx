@@ -7,6 +7,7 @@ import { Fade } from "react-reveal";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cartActions";
 import { useToasts } from "react-toast-notifications";
+import SearchBox from "./extras/SearchBox";
 
 function ProductsList({ categoryFilter }) {
   const [products, setProducts] = useState([]);
@@ -49,6 +50,7 @@ function ProductsList({ categoryFilter }) {
 
   return (
     <div className="row">
+      <SearchBox setProducts={setProducts} />
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
           <Loader />

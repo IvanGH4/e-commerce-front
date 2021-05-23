@@ -1,12 +1,15 @@
 import { useState, useRef } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/userActions";
 import { useHistory } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const prevRoute = useSelector((state) => state.prevRoute);
+  console.log("prevroute", prevRoute);
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -22,7 +25,7 @@ function Login() {
       { headers: { "Content-Type": "application/json" } }
     );
     dispatch(setUser(response.data));
-    history.push("/");
+    history.push(prevRoute);
   };
   return (
     <div className="container">

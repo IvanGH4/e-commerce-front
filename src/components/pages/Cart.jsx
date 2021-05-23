@@ -6,11 +6,48 @@ import {
   clearCart,
 } from "../../redux/cartActions";
 import { useToasts } from "react-toast-notifications";
+import { useHistory, useLocation } from "react-router-dom";
+import { setPrevRoute } from "../../redux/prevRouteActions";
+import axios from "axios";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const history = useHistory();
+  const location = useLocation();
   const { addToast } = useToasts();
+  console.log(cart);
+
+  const checkoutOrder = async () => {
+    await axios.post(
+      process.env.REACT_APP_API_URL + "/orders",
+      {
+        cart,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  };
+
+  const handleClick = () => {
+    if (user) {
+      dispatch(clearCart());
+      addToast(
+        "Gracias por tu compra! Se te ha enviado un correo electrónico con la verificación.",
+        { appearance: "success", autoDismiss: true }
+      );
+      checkoutOrder();
+    } else {
+      console.log(location.pathname);
+      dispatch(setPrevRoute(location.pathname));
+      history.push("/iniciarSesion");
+    }
+  };
 
   return (
     <div className="container">
@@ -73,28 +110,10 @@ function Cart() {
           {cart.length > 0 && (
             <div className="d-grid gap-2 mb-3">
               <p className="text-start fs-4">Finaliza tu compra</p>
-              <button
-                className="btn btn-success"
-                onClick={() => {
-                  dispatch(clearCart());
-                  addToast(
-                    "Gracias por tu compra! Se te ha enviado un email con la verificación.",
-                    { appearance: "success", autoDismiss: true }
-                  );
-                }}
-              >
+              <button className="btn btn-success" onClick={handleClick}>
                 <span>Pagar con MercadoPago</span>
               </button>
-              <button
-                className="btn btn-success"
-                onClick={() => {
-                  dispatch(clearCart());
-                  addToast(
-                    "Gracias por tu compra! Se te ha enviado un email con la verificación.",
-                    { appearance: "success", autoDismiss: true }
-                  );
-                }}
-              >
+              <button className="btn btn-success" onClick={handleClick}>
                 <span>Pagar con PayPal</span>
               </button>
             </div>

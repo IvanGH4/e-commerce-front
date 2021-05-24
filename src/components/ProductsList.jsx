@@ -7,16 +7,22 @@ import { Fade } from "react-reveal";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cartActions";
 import { useToasts } from "react-toast-notifications";
-import SearchBox from "./extras/SearchBox";
+import SideBar from "./extras/SideBar";
+import { useLocation } from "react-router-dom";
 
-function ProductsList({ categoryFilter }) {
+function ProductsList() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [prodQty, setProdQty] = useState(1);
+  const [categoryFilter, setCategoryFilter] = useState("");
 
   const { addToast } = useToasts();
 
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  // let searchParams =
+  //   location.search && location.search.match(/=(.+)/g)[0].slice(1);
 
   const handleClick = (product) => {
     const itemToCart = {
@@ -49,63 +55,34 @@ function ProductsList({ categoryFilter }) {
   }, []);
 
   return (
-    <div className="row">
-      <SearchBox setProducts={setProducts} />
-      {loading ? (
-        <div className="d-flex justify-content-center mt-5">
-          <Loader />
-        </div>
-      ) : categoryFilter !== "" ? (
-        products
-          .filter((item) => item.categoryId == categoryFilter)
-          .map((product) => {
-            return <ProductCard key={product.id} product={product} />;
+    <div className="row position-relative">
+      <div className="col-md-4">
+        <SideBar
+          setProducts={setProducts}
+          setCategoryFilter={setCategoryFilter}
+        />
+      </div>
+      <div className="col-md-8">
+        {loading ? (
+          <div className="d-flex justify-content-center mt-5">
+            <Loader />
+          </div>
+        ) : categoryFilter !== "" ? (
+          products
+            .filter((item) => item.categoryId == categoryFilter)
+            .map((product) => {
+              return <ProductCard key={product.id} product={product} />;
+            })
+        ) : (
+          products.map((product) => {
+            return (
+              <Fade right>
+                <ProductCard key={product.id} product={product} />
+              </Fade>
+            );
           })
-      ) : (
-        products.map((product) => {
-          return (
-            <Fade right>
-              <div className="col-12 cardglobal my-5" key={product.id}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="card-body">
-                      {product.featured && (
-                        <span className="badge bg-success">Destacado</span>
-                      )}
-                      <h5 className="card-title fs-2">{product.name}</h5>
-                      <p>{product.brand}</p>
-                    </div>
-                    <div className="categorycard-img img-fluid">
-                      <img
-                        src={product.img1}
-                        className="card-img-top"
-                        alt={product.name + "," + product.brand}
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6 d-flex align-items-center justify-content-center flex-column">
-                    <p className="fs-3">${product.price}</p>
-                    <div className="d-flex">
-                      <Link
-                        className="text-decoration-none btn btn-outline-dark"
-                        to={`/productos/${product.slug}`}
-                      >
-                        Quiero este producto
-                      </Link>
-                      <button
-                        className="btn btn-success"
-                        onClick={() => handleClick(product)}
-                      >
-                        <i class="fas fa-cart-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Fade>
-          );
-        })
-      )}
+        )}
+      </div>
     </div>
   );
 }

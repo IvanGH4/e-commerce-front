@@ -1,11 +1,34 @@
 import { Link } from "react-router-dom";
-
+import { Bounce } from "react-reveal";
 import "../css/Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer pt-10 pb-5 mt-auto bg-dark footer-dark ">
-      <div className="container px-5">
+    <footer className="footer pb-5 position-relative m-0 pt-0">
+      <section className="py-5 pre-footer">
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+            <div className="col-md-4">
+              <p className="text-center fs-5 m-0">
+                <i class="fas fa-shipping-fast"></i> Tus envíos a partir del día
+                siguiente
+              </p>
+            </div>
+            <div className="col-md-4">
+              <p className="text-center fs-5 m-0">
+                <i class="fas fa-box"></i> Envíos gratis a partir de $2500
+              </p>
+            </div>
+            <div className="col-md-4">
+              <p className="text-center fs-5 m-0">
+                <i class="fas fa-stopwatch"></i> Retiros y devoluciones gratis
+                en el local
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="container px-5 mt-5">
         <div className="row">
           <div className="col-lg-3">
             <div className="footer-brand">Hack Gaming</div>
@@ -97,9 +120,13 @@ function Footer() {
 
         <hr className="my-5" />
         <div className="row align-items-center justify-content-between">
-          <div className="col-md-6 small">Copyright © Your Website 2021</div>
-          <div className="col-md-6 small">
-            <Link to="#">Privacy Policy</Link>
+          <div className="col-md-6 small text-center">
+            Copyright © HackGaming 2021
+          </div>
+          <div className="col-md-6 small text-center">
+            <Link to="#" className="me-2">
+              Privacy Policy
+            </Link>
             <Link to="#">Terms Conditions</Link>
           </div>
         </div>

@@ -11,76 +11,8 @@ header.portada-home {
   background: rgb(108, 108, 108);
   background: radial-gradient(
       circle,
-      rgba(108, 108, 108, 0.5021358885351015) 0%,
-      rgba(0, 154, 165, 0.5021358885351015) 100%
-    ),
-    url("../../assets/newfondo.jpg");
-
-  min-height: 500px;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* Needed to position the navbar */
-  position: relative;
-}
-
-header.portada-home::after {
-  content: "Bienvenidos a HackGaming";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin: 0px;
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-header.portada-shop {
-  /* The image used */
-  background: rgb(108, 108, 108);
-  background: radial-gradient(
-      circle,
-      rgba(108, 108, 108, 0.5021358885351015) 0%,
-      rgba(0, 154, 165, 0.5021358885351015) 100%
-    ),
-    url("../../assets/portada-shop.jpg");
-
-  min-height: 500px;
-
-  /* Center and scale the image nicely */
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Needed to position the navbar */
-  position: relative;
-}
-
-header.portada-shop::after {
-  content: "Encuentra tus productos favoritos";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin: 0px;
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-header.portada-login-register {
-  /* The image used */
-  background: rgb(108, 108, 108);
-  background: radial-gradient(
-      circle,
-      rgba(108, 108, 108, 0.5021358885351015) 0%,
-      rgba(0, 154, 165, 0.5021358885351015) 100%
+      rgba(108, 108, 108, 0.4990371148459384) 0%,
+      rgba(246, 238, 201, 1) 100%
     ),
     url("../../assets/portada-login-register.jpg");
 
@@ -94,20 +26,85 @@ header.portada-login-register {
   position: relative;
 }
 
+header.portada-home::after {
+  content: "Bienvenidos a HackGaming";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f6eec9;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-shadow: 3px 3px rgba(71, 69, 84, 0.5018382352941176);
+}
+
+header.portada-shop {
+  /* The image used */
+  background: rgb(108, 108, 108);
+  background: radial-gradient(
+      circle,
+      rgba(108, 108, 108, 0.4990371148459384) 0%,
+      rgba(246, 238, 201, 1) 100%
+    ),
+    url("../../assets/newfondo.jpg");
+
+  min-height: 250px;
+
+  /* Center and scale the image nicely */
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+header.portada-shop::after {
+  content: "Encuentra tus productos favoritos";
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 56px);
+  width: 100%;
+  color: #f6eec9;
+  text-shadow: 3px 3px rgba(71, 69, 84, 0.5018382352941176);
+}
+
+header.portada-login-register {
+  /* The image used */
+  background: none;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
 header.portada-product {
   /* The image used */
   background: rgb(108, 108, 108);
   background: radial-gradient(
       circle,
-      rgba(108, 108, 108, 0.5021358885351015) 0%,
-      rgba(0, 154, 165, 0.5021358885351015) 100%
+      rgba(108, 108, 108, 0.4990371148459384) 0%,
+      rgba(246, 238, 201, 1) 100%
     ),
-    url("../../assets/portada-product.jpg");
+    url("../../assets/newfondo.jpg");
 
-  min-height: 500px;
+  min-height: 250px;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: center 65%;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -121,14 +118,32 @@ header.portada-product::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
   font-size: 4.5rem;
   font-weight: 800;
   margin: 0px;
   line-height: 1;
   letter-spacing: -0.05em;
+  text-align: center;
+  color: #f6eec9;
+  text-shadow: 3px 3px rgba(71, 69, 84, 0.5018382352941176);
 }
 
 header.portada-cart {
   background: none;
+}
+
+@media (max-width: 768px) {
+  header.portada-product::after,
+  header.portada-shop::after,
+  header.portada-home::after {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header.portada-product::after,
+  header.portada-shop::after,
+  header.portada-home::after {
+    font-size: 3rem;
+  }
 }

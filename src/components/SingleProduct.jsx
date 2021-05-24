@@ -118,7 +118,7 @@ function SingleProduct() {
           <div className="col-md-5 my-4">
             <div className="my-3">
               {product.featured && (
-                <span class="badge rounded-pill bg-primary my-3">
+                <span class="badge rounded-pill badge-custom my-3">
                   Producto Destacado
                 </span>
               )}
@@ -144,12 +144,12 @@ function SingleProduct() {
                 );
               })}
             </select>
-            <button className="btn" onClick={handleClick}>
+            <button className="btn add-to-cart-btn my-3" onClick={handleClick}>
               {" "}
               Agregar al Carrito <i class="fas fa-cart-plus"></i>{" "}
             </button>
 
-            <div class="tit">Compra online con:</div>
+            <div class="payment-list">Compra online con:</div>
 
             <div class="cnt">
               <ul class="d-inline d-flex list-unstyled justify-content-between flex-column flex-md-row">

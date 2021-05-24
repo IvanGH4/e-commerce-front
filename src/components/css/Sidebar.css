@@ -5,3 +5,16 @@
   position: -webkit-sticky !important;
   top: 50px;
 }
+
+.pro-sidebar-layout {
+  background-color: #ffa36c;
+  color: #474554;
+}
+
+.sidebar-btn {
+  color: #474554;
+}
+
+.search-btn {
+  background-color: #799351;
+}

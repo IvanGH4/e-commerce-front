@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/userActions";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function RegisterClient() {
   const [firstName, setFirstName] = useState("");
@@ -36,72 +36,79 @@ function RegisterClient() {
   return (
     <div className="container">
       <div className="row justify-content-center mt-5">
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="text"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-              placeholder="Nombre"
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="text"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-              placeholder="Apellido"
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="text"
-              value={telephone}
-              onChange={(e) => setTelephone(e.target.value)}
-              required
-              placeholder="Teléfono"
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-              placeholder="Dirección"
-            />
-          </div>
+        <div className="col-md-6">
+          <h2>Regístrate</h2>
+          <p>
+            Crea una nueva cuenta con tu email. Ya tienes una cuenta?
+            <Link to="/iniciarSesion"> Inicia sesión con tu cuenta</Link>
+          </p>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                placeholder="Nombre"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="text"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+                placeholder="Apellido"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="text"
+                value={telephone}
+                onChange={(e) => setTelephone(e.target.value)}
+                required
+                placeholder="Teléfono"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+                placeholder="Dirección"
+              />
+            </div>
 
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="Email"
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              className="form-control"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              placeholder="Contraseña"
-            />
-          </div>
-          <button className="btn btn-outline-dark" type="submit">
-            Registrarse
-          </button>
-        </form>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="Email"
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="Contraseña"
+              />
+            </div>
+            <button className="btn btn-outline-dark" type="submit">
+              Registrarse
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

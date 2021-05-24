@@ -79,7 +79,7 @@ function Navbar() {
                       Registrarse
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <NavLink
                       className="nav-link"
                       activeClassName="active"
@@ -87,7 +87,7 @@ function Navbar() {
                     >
                       Registrarse Admin
                     </NavLink>
-                  </li>
+                  </li> */}
                 </>
               ) : (
                 <li className="nav-item">

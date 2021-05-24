@@ -77,3 +77,58 @@
 .cell {
   margin-left: 100%;
 }
+/*  */
+.loader {
+  animation: loader-turn 1s linear infinite;
+  padding: 1rem;
+  max-width: 60px;
+  width: 100%;
+}
+@keyframes loader-turn {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+.loader__value {
+  animation: loader-stroke 6s linear infinite;
+  fill: none;
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+.loader__value:nth-child(1) {
+  stroke: #799351;
+}
+.loader__value:nth-child(2) {
+  stroke: #ffa36c;
+  animation-delay: 1s;
+}
+.loader__value:nth-child(3) {
+  stroke: #a20a0a;
+  animation-delay: 2s;
+}
+.loader__value:nth-child(4) {
+  stroke: #f6eec9;
+  animation-delay: 3s;
+}
+.loader__value:nth-child(5) {
+  stroke: #474554;
+  animation-delay: 4s;
+}
+.loader__value:nth-child(6) {
+  stroke: pink;
+  animation-delay: 5s;
+}
+@keyframes loader-stroke {
+  8.3333333333% {
+    stroke-dashoffset: 0;
+  }
+  16.6666666667%,
+  100% {
+    stroke-dashoffset: 63;
+  }
+}

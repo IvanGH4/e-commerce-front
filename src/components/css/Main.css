@@ -1,5 +1,5 @@
 /* Texto lindo */
-body{
+body {
   color: #474554;
 }
 .css-h2 {
@@ -8,7 +8,7 @@ body{
   margin: 0px;
   line-height: 1;
   letter-spacing: -0.05em;
- /*  color: black; */
+  /*  color: black; */
 }
 
 .primerTitulo {
@@ -38,5 +38,29 @@ body{
 }
 
 .cardglobal:hover {
-  box-shadow: 0 0 3px 3px #009aa5;
+  box-shadow: 0 0 3px 3px #ffa36c;
+}
+
+.add-to-cart-btn {
+  background-color: #799351;
+  color: #f6eec9;
+}
+
+.product-card-btn {
+  background-color: #f6eec9;
+  color: #474554;
+}
+
+.product-card-btn:hover {
+  background-color: #799351;
+  color: #f6eec9;
+}
+
+.badge-custom {
+  background-color: #a20a0a;
+}
+
+.payment-list,
+.payment-list i {
+  color: #474554;
 }

@@ -28,6 +28,9 @@ function ProductCard({ product }) {
       <div className="row">
         <div className="col-md-6">
           <div className="card-body">
+            {product.featured && (
+              <span className="badge badge-custom">Destacado</span>
+            )}
             <h5 className="card-title fs-2">{product.name}</h5>
             <p>{product.brand}</p>
           </div>
@@ -43,12 +46,12 @@ function ProductCard({ product }) {
           <p className="fs-3">${product.price}</p>
           <div className="d-flex align-items-center">
             <Link
-              className="text-decoration-none btn btn-outline-dark"
+              className="text-decoration-none btn product-card-btn"
               to={`/productos/${product.slug}`}
             >
               Quiero este producto
             </Link>
-            <button className="btn btn-success" onClick={handleClick}>
+            <button className="btn add-to-cart-btn" onClick={handleClick}>
               <i class="fas fa-cart-plus"></i>
             </button>
           </div>

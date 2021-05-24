@@ -2,14 +2,13 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/userActions";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const prevRoute = useSelector((state) => state.prevRoute);
-  console.log("prevroute", prevRoute);
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -29,43 +28,51 @@ function Login() {
   };
   return (
     <div className="container">
-      <div className="row mt-5">
-        <form id="loginform" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label">
-              Email
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="ejemplo@mail.com"
-            />
-          </div>
-          <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
-              Contraseña
-            </label>
-            <input
-              type="password"
-              className="form-control"
-              id="exampleInputPassword1"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              placeholder="Contraseña"
-            />
-          </div>
-          <div className="mb-3">
-            <button type="submit" className="btn btn-primary">
-              Iniciar Sesión
-            </button>
-          </div>
-        </form>
+      <div className="row mt-5 justify-content-center">
+        <div className="col-md-6">
+          <h2>Iniciar sesión</h2>
+          <p>
+            Inicia sesión usando tus datos. Si no tienes una cuenta también
+            puedes
+            <Link to="/registroCliente"> crear una nueva cuenta</Link>
+          </p>
+          <form id="loginform" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label for="exampleInputEmail1" className="form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="ejemplo@mail.com"
+              />
+            </div>
+            <div className="mb-3">
+              <label for="exampleInputPassword1" className="form-label">
+                Contraseña
+              </label>
+              <input
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="Contraseña"
+              />
+            </div>
+            <div className="mb-3">
+              <button type="submit" className="btn btn-primary">
+                Iniciar Sesión
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

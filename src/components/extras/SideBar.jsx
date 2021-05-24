@@ -10,22 +10,31 @@ import {
 } from "react-pro-sidebar";
 import "../css/Sidebar.css";
 import "react-pro-sidebar/dist/css/styles.css";
+import { useHistory } from "react-router-dom";
+import SearchBox from "./SearchBox";
 
-function SideBar({ setCategoryFilter }) {
+function SideBar({ setCategoryFilter, setProducts }) {
   const categories = useSelector((state) => state.categories);
+  const history = useHistory();
 
   return (
-    <ProSidebar className="my-4 custom-sidebar">
-      <SidebarHeader className="p-3 fs-2 text-center">
-        Buscá por categoría
+    <ProSidebar className="my-4 custom-sidebar" width="300px">
+      <SidebarHeader className="p-3 fs-4">
+        <p>Buscá lo que precises</p>
+        <SearchBox setProducts={setProducts} />
       </SidebarHeader>
       <Menu iconShape="square">
         <MenuItem>
           <button
-            className="btn text-white p-0 fs-4 fw-bold"
-            onClick={() => setCategoryFilter("")}
+            className="btn sidebar-btn p-0 fs-4 fw-bold"
+            onClick={() => {
+              setCategoryFilter("");
+              history.push({
+                search: `?category=all`,
+              });
+            }}
           >
-            Inicio
+            Todos los productos
           </button>
         </MenuItem>
         {categories &&
@@ -33,8 +42,13 @@ function SideBar({ setCategoryFilter }) {
             return (
               <MenuItem key={category.id}>
                 <button
-                  className="btn p-0 text-white"
-                  onClick={() => setCategoryFilter(category.id)}
+                  className="btn p-0 sidebar-btn"
+                  onClick={() => {
+                    setCategoryFilter(category.id);
+                    history.push({
+                      search: `?category=${category.id}`,
+                    });
+                  }}
                 >
                   {category.name}
                 </button>

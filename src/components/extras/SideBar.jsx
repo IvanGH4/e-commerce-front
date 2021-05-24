@@ -30,7 +30,7 @@ function SideBar({ setCategoryFilter, setProducts }) {
             onClick={() => {
               setCategoryFilter("");
               history.push({
-                search: `?category=all`,
+                search: "",
               });
             }}
           >

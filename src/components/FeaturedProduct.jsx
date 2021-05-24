@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function FeaturedProduct({ product }) {
   return (
-    <div className="col-md-4 cardglobal text-center">
+    <div className="cardglobal text-center custom-category-card">
       <Link
         className="text-decoration-none text-dark"
         to={`/productos/${product.slug}`}
@@ -18,7 +18,7 @@ function FeaturedProduct({ product }) {
           </div>
 
           <div className="card-body">
-            <h5 className="card-title">{product.name}</h5>
+            <h5 className="card-title custom-font-color">{product.name}</h5>
           </div>
         </div>
       </Link>

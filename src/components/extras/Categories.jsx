@@ -21,7 +21,7 @@ function Categories() {
                     >
                       <Link
                         className="css-link themed-link"
-                        to={`/categorias/${category.id}`}
+                        to={`/categorias/${category.name}/${category.id}`}
                       >
                         {category.name}
                       </Link>

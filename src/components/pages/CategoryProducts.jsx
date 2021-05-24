@@ -9,8 +9,7 @@ function CategoryProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const { id } = useParams();
-  console.log("este es el id ", id);
+  const { id, name } = useParams();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -34,13 +33,16 @@ function CategoryProducts() {
           <Loader />
         </div>
       ) : (
-        <div className="row">
+        <div className="row justify-content-between">
+          <h2 className="my-5">
+            Estos son los productos de la categoría <i>{name}</i>
+          </h2>
           {products &&
             products.map((product) => {
               return (
-                <Fade right>
-                  <ProductCard product={product} />
-                </Fade>
+                <ProductCard product={product} />
+                // <Fade right>
+                // </Fade>
               );
             })}
         </div>

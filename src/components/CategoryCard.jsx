@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function CategoryCard({ category }) {
   return (
-    <div className="col-md-4 my-3 cardglobal text-center">
+    <div className="my-3 cardglobal text-center custom-category-card">
       <Link
         className="text-decoration-none text-dark"
-        to={`/categorias/${category.id}`}
+        to={`/categorias/${category.name}/${category.id}`}
       >
         <div className="card border-0 ">
           <div className="categorycard-img img-fluid">

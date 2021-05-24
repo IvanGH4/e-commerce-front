@@ -16,7 +16,7 @@ function Main() {
           </p>
         </Bounce>
         <Bounce right>
-          <div className="row row-cols-1 row-cols-md-2 g-4 pt-4 my-3 ">
+          <div className="row row-cols-1 row-cols-md-2 g-4 pt-4 my-3 justify-content-between">
             <CategoriesList />
           </div>
         </Bounce>
@@ -29,7 +29,7 @@ function Main() {
           <p className="my-3 fs-4">
             Encuentra nuestros productos más vendidos!
           </p>
-          <div className="row row-cols-1 row-cols-md-2 g-4 pt-4">
+          <div className="row row-cols-1 row-cols-md-2 g-4 pt-4 justify-content-between">
             <FeaturedProductList />
           </div>
         </section>

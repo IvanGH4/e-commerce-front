@@ -24,25 +24,45 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="col-12 cardglobal my-5">
-      <div className="row">
-        <div className="col-md-6">
-          <div className="card-body">
-            {product.featured && (
-              <span className="badge badge-custom">Destacado</span>
-            )}
-            <h5 className="card-title fs-2">{product.name}</h5>
-            <p>{product.brand}</p>
-          </div>
-          <div className="categorycard-img img-fluid">
-            <img
-              src={product.img1}
-              className="card-img-top"
-              alt={product.name + "," + product.brand}
-            />
+    <div className="custom-product-card cardglobal my-5 text-center py-2">
+      <div className="card-body">
+        {product.featured && (
+          <span className="badge badge-custom">Destacado</span>
+        )}
+        <h5 className="card-title fs-2">{product.name}</h5>
+        <p>{product.brand}</p>
+      </div>
+      {/* <div className="categorycard-img img-fluid">
+        <img
+          src={product.img1}
+          className="card-img-top"
+          alt={product.name + "," + product.brand}
+        />
+      </div> */}
+      <div className="card border-0 ">
+        <div className="categorycard-img">
+          <img
+            src={product.img1}
+            className="card-img-top img-fluid"
+            alt={product.name}
+          />
+        </div>
+        <div>
+          <p className="fs-3">${product.price}</p>
+          <div className="d-flex align-items-center justify-content-around">
+            <Link
+              className="text-decoration-none btn product-card-btn"
+              to={`/productos/${product.slug}`}
+            >
+              Ver más
+            </Link>
+            <button className="btn add-to-cart-btn" onClick={handleClick}>
+              <i class="fas fa-cart-plus"></i>
+            </button>
           </div>
         </div>
-        <div className="col-md-6 d-flex align-items-center justify-content-center flex-column">
+      </div>
+      {/* <div className="col-md-6 d-flex align-items-center justify-content-center flex-column">
           <p className="fs-3">${product.price}</p>
           <div className="d-flex align-items-center">
             <Link
@@ -55,8 +75,7 @@ function ProductCard({ product }) {
               <i class="fas fa-cart-plus"></i>
             </button>
           </div>
-        </div>
-      </div>
+        </div> */}
     </div>
   );
 }

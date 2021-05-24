@@ -1,6 +1,7 @@
 /* Texto lindo */
 body {
   color: #474554;
+  background-color: #d6d6d6;
 }
 .css-h2 {
   font-size: 48px;
@@ -11,13 +12,18 @@ body {
   /*  color: black; */
 }
 
+.custom-font-color {
+  color: #474554;
+}
+
 .primerTitulo {
   font-size: 4rem;
   font-weight: 800;
   margin: 0px;
   line-height: 1;
   letter-spacing: -0.05em;
-  color: black;
+  /* color: black; */
+  color: #474554;
 }
 
 .categorycard-img {
@@ -33,12 +39,23 @@ body {
   margin: 0 auto;
 }
 
+.custom-category-card {
+  width: 30%;
+}
+
 .cardglobal {
   transition: 0.3s ease-in-out;
+  /* border: solid 1px #474554; */
+  background-color: #ffffff;
 }
 
 .cardglobal:hover {
   box-shadow: 0 0 3px 3px #ffa36c;
+}
+
+.custom-product-card {
+  width: 45%;
+  background-color: #ffffff;
 }
 
 .add-to-cart-btn {
@@ -63,4 +80,10 @@ body {
 .payment-list,
 .payment-list i {
   color: #474554;
+}
+
+@media (max-width: 768px) {
+  .custom-product-card {
+    width: 100%;
+  }
 }

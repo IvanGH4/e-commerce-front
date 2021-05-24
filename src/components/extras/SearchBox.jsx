@@ -16,38 +16,41 @@ function SearchBox({ setProducts }) {
     history.push({
       search: `?search=${searchTerm}`,
     });
-    const response = await axios.get(
-      process.env.REACT_APP_API_URL + `/products/search`,
-      {
-        params: {
-          search: searchTerm,
-        },
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    setProducts(response.data);
   };
 
   return (
     <div className="d-flex justify-content-center mt-3">
       <form onSubmit={handleSubmit} className="d-flex align-items-center">
-        <div className="mb-3">
+        <div class="input-group mb-3">
           <input
             type="text"
-            placeholder="Busca un producto..."
+            class="form-control"
+            placeholder="Busca entre las categorías..."
+            aria-label="Busca en todas las categorías..."
+            aria-describedby="button-addon2"
+            value={searchTerm}
+            onChange={handleChange}
+            name="search"
+          />
+          <button class="btn search-btn" type="submit" id="button-addon2">
+            Buscar
+          </button>
+        </div>
+        {/* <div className="mb-3">
+          <input
+            type="text"
+            placeholder="Busca en todas las categorías..."
             className="form-control border-dark"
             value={searchTerm}
             onChange={handleChange}
             name="search"
           />
-        </div>
-        <div className="mb-3">
+        </div> */}
+        {/* <div className="mb-3">
           <button type="submit" className="btn search-btn">
             Buscar
           </button>
-        </div>
+        </div> */}
       </form>
     </div>
   );

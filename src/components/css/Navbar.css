@@ -4,6 +4,11 @@
   margin: 0px;
   line-height: 1;
   letter-spacing: -0.05em;
+  color: #474554;
+}
+
+.my-brand-style:hover {
+  color: #474554;
 }
 
 header.portada-home {
@@ -12,7 +17,7 @@ header.portada-home {
   background: radial-gradient(
       circle,
       rgba(108, 108, 108, 0.4990371148459384) 0%,
-      rgba(246, 238, 201, 1) 100%
+      rgba(71, 69, 84, 1) 100%
     ),
     url("../../assets/portada-login-register.jpg");
 
@@ -48,7 +53,7 @@ header.portada-shop {
   background: radial-gradient(
       circle,
       rgba(108, 108, 108, 0.4990371148459384) 0%,
-      rgba(246, 238, 201, 1) 100%
+      rgba(71, 69, 84, 1) 100%
     ),
     url("../../assets/newfondo.jpg");
 
@@ -97,7 +102,7 @@ header.portada-product {
   background: radial-gradient(
       circle,
       rgba(108, 108, 108, 0.4990371148459384) 0%,
-      rgba(246, 238, 201, 1) 100%
+      rgba(71, 69, 84, 1) 100%
     ),
     url("../../assets/newfondo.jpg");
 

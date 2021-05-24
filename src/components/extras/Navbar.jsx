@@ -20,7 +20,8 @@ function Navbar() {
       className={`${
         location.pathname === "/"
           ? "portada-home"
-          : location.pathname === "/shop"
+          : location.pathname === "/shop" ||
+            location.pathname.match("/categorias")
           ? "portada-shop"
           : location.pathname.match("/productos")
           ? "portada-product"
@@ -43,7 +44,10 @@ function Navbar() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <NavLink className="navbar-brand my-brand-style" to="/">
+            <NavLink
+              className="text-decoration-none my-brand-style custom-color-font"
+              to="/"
+            >
               HackGaming
             </NavLink>
           </div>

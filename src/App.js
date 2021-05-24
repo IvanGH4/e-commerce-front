@@ -47,7 +47,7 @@ function App() {
           />
           <PublicRoute
             component={CategoryProducts}
-            path="/categorias/:id"
+            path="/categorias/:name/:id"
             restricted={false}
           />
           <PublicRoute component={Cart} path="/carrito" restricted={false} />

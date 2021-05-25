@@ -30,7 +30,7 @@ function Navbar() {
           : "portada-login-register"
       } img-fluid`}
     >
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <div className="d-flex align-items-center justify-content-between">
             <button
@@ -55,7 +55,7 @@ function Navbar() {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className="nav-link custom-link"
                   activeClassName="active"
                   to="/shop"
                 >
@@ -68,7 +68,7 @@ function Navbar() {
                   <li className="nav-item">
                     <NavLink
                       to="/iniciarSesion"
-                      className="nav-link"
+                      className="nav-link custom-link"
                       activeClassName="active"
                     >
                       Login
@@ -76,7 +76,7 @@ function Navbar() {
                   </li>
                   <li className="nav-item">
                     <NavLink
-                      className="nav-link"
+                      className="nav-link custom-link"
                       activeClassName="active"
                       to="/registroCliente"
                     >
@@ -96,7 +96,7 @@ function Navbar() {
               ) : (
                 <li className="nav-item">
                   <button
-                    className="nav-link btn"
+                    className="nav-link btn custom-link"
                     onClick={() => {
                       dispatch(logout());
                       history.push("/");
@@ -108,7 +108,7 @@ function Navbar() {
               )}
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className="nav-link custom-link"
                   activeClassName="active"
                   to="/carrito"
                 >

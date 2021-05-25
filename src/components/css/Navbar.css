@@ -10,6 +10,17 @@
 .my-brand-style:hover {
   color: #474554;
 }
+.nav-link{
+  color: #474554;
+}
+
+.nav-link.active{
+  color: #799351;
+}
+
+.nav-link:hover{
+  color: #ffa36c;
+}
 
 header.portada-home {
   /* The image used */

@@ -51,13 +51,13 @@ function ProductCard({ product }) {
           <p className="fs-3">${product.price}</p>
           <div className="d-flex align-items-center justify-content-around">
             <Link
-              className="text-decoration-none btn product-card-btn"
+              className="text-decoration-none btn product-card-btn px-5"
               to={`/productos/${product.slug}`}
             >
-              Ver más
+              <i className="fas fa-info-circle"></i> Ver más
             </Link>
-            <button className="btn add-to-cart-btn" onClick={handleClick}>
-              <i class="fas fa-cart-plus"></i>
+            <button className="btn add-to-cart-btn px-5" onClick={handleClick}>
+              <i className="fas fa-cart-plus"></i> Comprar
             </button>
           </div>
         </div>

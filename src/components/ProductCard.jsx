@@ -26,10 +26,12 @@ function ProductCard({ product }) {
   return (
     <div className="custom-product-card cardglobal my-5 text-center py-2">
       <div className="card-body">
-        {product.featured && (
+        {product.featured ? (
           <span className="badge badge-custom">Destacado</span>
+        ) : (
+          <span className="badge badge-custom invisible">Normal</span>
         )}
-        <h5 className="card-title fs-2">{product.name}</h5>
+        <h5 className="card-title fs-2 py-3">{product.name}</h5>
         <p>{product.brand}</p>
       </div>
       {/* <div className="categorycard-img img-fluid">

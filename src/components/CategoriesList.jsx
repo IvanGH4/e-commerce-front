@@ -26,7 +26,12 @@ function CategoriesList() {
   return (
     <>
       {loading ? (
-        <Loader />
+        <div
+          className="d-flex justify-content-center"
+          style={{ width: "100%" }}
+        >
+          <Loader />
+        </div>
       ) : (
         categories
           .slice(0, 6)

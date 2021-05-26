@@ -15,6 +15,7 @@ import CategoryProducts from "./components/pages/CategoryProducts";
 import Cart from "./components/pages/Cart";
 import About from "./components/pages/About";
 import Profile from "./components/pages/Profile";
+import Dashboard from "./components/pages/Dashboard";
 
 function App() {
   return (
@@ -55,8 +56,8 @@ function App() {
           <PublicRoute component={Cart} path="/carrito" restricted={false} />
           <PublicRoute component={About} path="/proyecto" restricted={false} />
           <PublicRoute component={Profile} path="/perfil" restricted={true} />
-          {/*
-        <PrivateRoute path="/admin" component={admin} /> */}
+
+          <PrivateRoute path="/admin" component={Dashboard} />
         </Switch>
       </div>
     </BrowserRouter>

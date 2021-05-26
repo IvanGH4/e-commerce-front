@@ -19,9 +19,9 @@ function SearchBox({ setProducts }) {
   };
 
   return (
-    <div className="d-flex justify-content-center mt-3">
+    <div className="mt-5">
       <form onSubmit={handleSubmit} className="d-flex align-items-center">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 ">
           <input
             type="text"
             class="form-control"

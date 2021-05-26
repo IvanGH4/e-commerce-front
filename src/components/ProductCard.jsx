@@ -48,7 +48,12 @@ function ProductCard({ product }) {
           />
         </div>
         <div>
-          <p className="fs-3">${product.price}</p>
+          <p className="fs-3">
+            {new Intl.NumberFormat("UYU", {
+              style: "currency",
+              currency: "UYU",
+            }).format(product.price)}
+          </p>
           <div className="d-flex align-items-center justify-content-around">
             <Link
               className="text-decoration-none btn product-card-btn px-5"

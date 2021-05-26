@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../extras/Loader";
 import ProductCard from "../ProductCard";
+import Categories from "../extras/Categories";
 import { useParams } from "react-router-dom";
 import { Fade } from "react-reveal";
 
@@ -24,10 +25,11 @@ function CategoryProducts() {
       setLoading(false);
     };
     getProducts();
-  }, []);
+  }, [id]);
 
   return (
     <div className="container">
+      <Categories />
       {loading ? (
         <div className="row justify-content-center">
           <Loader />

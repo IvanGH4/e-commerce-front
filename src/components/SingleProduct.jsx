@@ -129,7 +129,13 @@ function SingleProduct() {
             <p className="my-3">{product.description}</p>
           </div>
           <div className="col-md-3 my-4">
-            <p className="my-3">Precio: ${product.price}</p>
+            <p className="my-3">
+              Precio:{" "}
+              {new Intl.NumberFormat("UYU", {
+                style: "currency",
+                currency: "UYU",
+              }).format(product.price)}
+            </p>
             <p className="my-3">Quedan {product.stock} disponibles!</p>
             <select
               className="form-select"

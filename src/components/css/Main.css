@@ -88,18 +88,18 @@ body {
   }
 }
 
-
 .my-custom-card {
   border: 1px solid #474554;
   box-shadow: 0px 0px 2px 2px rgba(71, 69, 84, 0.3);
-    background-color: white;
-    color: #474554;
+  background-color: white;
+  color: #474554;
 }
 
 .my-custom-card a {
- color: #ffa36c;
+  color: #ffa36c;
 }
-.my-custom-card h2, .my-custom-card h4 {
+.my-custom-card h2,
+.my-custom-card h4 {
   font-size: 2rem;
   font-weight: 800;
   margin: 1rem 0;
@@ -108,21 +108,24 @@ body {
   color: #474554;
 }
 
-.my-custom-card button{
+.my-custom-card button {
   background-color: #799351;
-  color:white;
+  color: white;
 }
 
-.my-custom-card .remove-btn{
+.my-custom-card .remove-btn {
   color: #a20a0a;
 }
 
-.form-control:focus{
-  color:#495057;
-  background-color:#fff;
-  border-color:#ffa36c;
-  outline:0;
-  box-shadow:0 0 0 .2rem rgba(255,163,108,.25);
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ffa36c;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 163, 108, 0.25);
 }
 
-
+.about,
+.about i {
+  color: #474554;
+}

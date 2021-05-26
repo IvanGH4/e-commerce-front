@@ -13,6 +13,7 @@ import SingleProduct from "./components/SingleProduct";
 import Shop from "./components/pages/Shop";
 import CategoryProducts from "./components/pages/CategoryProducts";
 import Cart from "./components/pages/Cart";
+import About from "./components/pages/About";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             restricted={false}
           />
           <PublicRoute component={Cart} path="/carrito" restricted={false} />
+          <PublicRoute component={About} path="/proyecto" restricted={false} />
           {/*
         <PrivateRoute path="/admin" component={admin} /> */}
         </Switch>

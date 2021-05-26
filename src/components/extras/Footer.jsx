@@ -32,7 +32,11 @@ function Footer() {
         <div className="row">
           <div className="col-lg-3">
             <div className="footer-brand">Hack Gaming</div>
-            <div className="mb-3"> Sobre este Proyecto</div>
+            <div className="mb-3">
+              <Link className="text-decoration-none" to="/proyecto">
+                Sobre este Proyecto
+              </Link>
+            </div>
             <div className="icon-list-social mb-5">
               <Link className="icon-list-social-link" to="#!">
                 <i className="fab fa-instagram"></i>

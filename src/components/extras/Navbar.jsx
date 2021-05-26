@@ -62,7 +62,16 @@ function Navbar() {
                   Shop
                 </NavLink>
               </li>
-
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link custom-link"
+                  activeClassName="active"
+                  to="/carrito"
+                >
+                  <i class="fas fa-cart-plus me-1"></i>
+                  <span>{cart.length}</span>
+                </NavLink>
+              </li>
               {!user ? (
                 <>
                   <li className="nav-item">
@@ -94,28 +103,25 @@ function Navbar() {
                   </li> */}
                 </>
               ) : (
-                <li className="nav-item">
-                  <button
-                    className="nav-link btn custom-link"
-                    onClick={() => {
-                      dispatch(logout());
-                      history.push("/");
-                    }}
-                  >
-                    Cerrar Sesión
-                  </button>
-                </li>
+                <>
+                  <li className="nav-item">
+                    <NavLink to="/perfil" className="nav-link custom-link">
+                      <i className="fas fa-user"></i>
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <button
+                      className="nav-link btn custom-link"
+                      onClick={() => {
+                        dispatch(logout());
+                        history.push("/");
+                      }}
+                    >
+                      Cerrar Sesión
+                    </button>
+                  </li>
+                </>
               )}
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link custom-link"
-                  activeClassName="active"
-                  to="/carrito"
-                >
-                  <i class="fas fa-cart-plus me-1"></i>
-                  <span>{cart.length}</span>
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>

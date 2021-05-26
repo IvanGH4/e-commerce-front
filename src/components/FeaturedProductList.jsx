@@ -22,7 +22,12 @@ function FeaturedProductList() {
   return (
     <>
       {loading ? (
-        <Loader />
+        <div
+          className="d-flex justify-content-center"
+          style={{ width: "100%" }}
+        >
+          <Loader />
+        </div>
       ) : (
         products
           .slice(0, 3)

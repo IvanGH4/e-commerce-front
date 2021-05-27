@@ -9,7 +9,8 @@ const cartReducer = (state = [], action) => {
         );
         if (productExistsOnCart) {
           productExistsOnCart.productQuantity =
-            productExistsOnCart.productQuantity + 1;
+            productExistsOnCart.productQuantity +
+            action.payload.productQuantity;
         } else {
           draft.unshift(action.payload);
         }

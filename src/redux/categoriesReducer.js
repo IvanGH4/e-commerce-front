@@ -1,7 +1,16 @@
+import produce from "immer";
+
 const categoriesReducer = (state = [], action) => {
   switch (action.type) {
     case "SET_CATEGORIES":
       return action.payload;
+    case "DELETE_CATEGORY":
+      return produce(state, (draft) => {
+        let categoryToRemove = draft.find((item) => item.id === action.payload);
+        let indexOfCategory = draft.indexOf(categoryToRemove);
+        draft.splice(indexOfCategory, 1);
+      });
+
     default:
       return state;
   }

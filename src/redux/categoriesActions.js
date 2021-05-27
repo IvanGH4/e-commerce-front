@@ -4,3 +4,10 @@ export const setCategories = (categories) => {
     payload: categories,
   };
 };
+
+export const deleteCategory = (id) => {
+  return {
+    type: "DELETE_CATEGORY",
+    payload: id,
+  };
+};

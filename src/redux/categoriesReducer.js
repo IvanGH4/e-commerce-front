@@ -18,6 +18,10 @@ const categoriesReducer = (state = [], action) => {
         );
         categoryToUpdate.name = action.payload.name;
       });
+    case "ADD_CATEGORY":
+      return produce(state, (draft) => {
+        draft.push(action.payload);
+      });
 
     default:
       return state;

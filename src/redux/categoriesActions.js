@@ -18,3 +18,10 @@ export const updateCategory = (info) => {
     payload: info,
   };
 };
+
+export const addCategory = (info) => {
+  return {
+    type: "ADD_CATEGORY",
+    payload: info,
+  };
+};

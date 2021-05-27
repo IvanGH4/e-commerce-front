@@ -10,6 +10,14 @@ const categoriesReducer = (state = [], action) => {
         let indexOfCategory = draft.indexOf(categoryToRemove);
         draft.splice(indexOfCategory, 1);
       });
+    case "UPDATE_CATEGORY":
+      console.log(action.payload);
+      return produce(state, (draft) => {
+        let categoryToUpdate = draft.find(
+          (item) => item.id == action.payload.id
+        );
+        categoryToUpdate.name = action.payload.name;
+      });
 
     default:
       return state;

@@ -11,3 +11,10 @@ export const deleteCategory = (id) => {
     payload: id,
   };
 };
+
+export const updateCategory = (info) => {
+  return {
+    type: "UPDATE_CATEGORY",
+    payload: info,
+  };
+};

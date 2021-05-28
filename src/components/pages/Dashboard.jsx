@@ -19,14 +19,17 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link to="/admin/categorias">
-                      <div className="text-xs fw-bold text-primary text-uppercase mb-1">
+                    <Link
+                      to="/admin/categorias"
+                      className="text-decoration-none"
+                    >
+                      <div className="text-xs fw-bold text-primary text-uppercase mb-1 ">
                         Categorias
                       </div>
                     </Link>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-calendar fa-2x "></i>
+                    <i className="fas fa-list fs-2"></i>
                   </div>
                 </div>
               </div>
@@ -38,14 +41,17 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link to="/admin/productos">
+                    <Link
+                      to="/admin/productos"
+                      className="text-decoration-none"
+                    >
                       <div className="text-xs fw-bold text-success text-uppercase mb-1">
                         Productos
                       </div>
                     </Link>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-dollar-sign fa-2x "></i>
+                    <i class="fas fa-laptop fs-2"></i>
                   </div>
                 </div>
               </div>
@@ -57,14 +63,17 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link to="/admin/administradores">
+                    <Link
+                      to="/admin/administradores"
+                      className="text-decoration-none"
+                    >
                       <div className="text-xs fw-bold text-info text-uppercase mb-1">
                         Administradores
                       </div>
                     </Link>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-clipboard-list fa-2x "></i>
+                    <i className="fas fa-users fs-2"></i>
                   </div>
                 </div>
               </div>
@@ -76,14 +85,14 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link to="/admin">
+                    <Link to="/admin" className="text-decoration-none">
                       <div className="text-xs fw-bold text-warning text-uppercase mb-1">
                         Página principal
                       </div>
                     </Link>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-comments fa-2x "></i>
+                    <i class="fas fa-house-user fs-2"></i>
                   </div>
                 </div>
               </div>

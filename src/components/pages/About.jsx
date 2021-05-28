@@ -90,8 +90,12 @@ function About() {
         </section>
         <section className="row my-4">
           <div className="col-md-4">
-            <div className="bg-light">
-              <img src={logo} className="img-fluid" alt="Nela Sandes" />
+            <div className="bg-transparent">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C5603AQHDKn_j5B_1WA/profile-displayphoto-shrink_400_400/0/1622067101535?e=1627516800&v=beta&t=a9mgqjvVCL4OdxujEC6-fM1pYgikADa5WxUsRNx8OAI"
+                className="img-fluid"
+                alt="Nela Sandes"
+              />
             </div>
             <p className="fs-4">Nela Sandes</p>
             <small>Full Stack Developer</small>
@@ -121,9 +125,9 @@ function About() {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="bg-light">
+            <div className="bg-transparent">
               <img
-                src={logo}
+                src="https://media-exp1.licdn.com/dms/image/C4D03AQHXAsycQK_i_A/profile-displayphoto-shrink_400_400/0/1622215080752?e=1627516800&v=beta&t=z3yr3epSNqsbzjBsdAIs_8dy4GTjl3kCt0bJhesATvs"
                 className="img-fluid"
                 alt="José Ignacio Carricart"
               />
@@ -157,7 +161,11 @@ function About() {
           </div>
           <div className="col-md-4">
             <div className="bg-light">
-              <img src={logo} className="img-fluid" alt="Ivan Garcia" />
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C5603AQED1boIPbN4ew/profile-displayphoto-shrink_800_800/0/1622064179515?e=1627516800&v=beta&t=Ao6uWoon5vhp5pOcos_A8OwIPWMef4XO0Qf5vcfQ42M"
+                className="img-fluid"
+                alt="Ivan Garcia"
+              />
             </div>
             <p className="fs-4">Iván García</p>
             <small>Full Stack Developer</small>

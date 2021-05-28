@@ -55,7 +55,7 @@ function HomeAdmin() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-6 text-center mb-5">
-              <h2 className="heading-section">Table #09</h2>
+              <h2 className="heading-section css-h2">Órdenes</h2>
             </div>
           </div>
           <div className="row">

@@ -4,6 +4,7 @@ import axios from "axios";
 import { setAdmins, deleteAdmin } from "../../redux/adminsActions";
 import DashNewAdminForm from "../DashNewAdminForm";
 import { useToasts } from "react-toast-notifications";
+import DashUpdateAdminForm from "../DashUpdateAdminForm";
 
 function DashboardAdminsTable() {
   const user = useSelector((state) => state.user);
@@ -24,6 +25,8 @@ function DashboardAdminsTable() {
           },
         }
       );
+      console.log(response.data);
+      console.log(admins);
       dispatch(setAdmins(response.data));
     };
     getAdmins();
@@ -68,6 +71,7 @@ function DashboardAdminsTable() {
           </div>
           <div className="row">
             <DashNewAdminForm />
+            <DashUpdateAdminForm />
           </div>
           <div className="row">
             <div className="col-md-12">
@@ -84,24 +88,25 @@ function DashboardAdminsTable() {
                   </thead>
 
                   <tbody>
-                    {admins.map((admin) => {
-                      return (
-                        <tr key={admin.id}>
-                          <th scope="row">{admin.id}</th>
-                          <td>{admin.firstname}</td>
-                          <td>{admin.lastname}</td>
-                          <td>{admin.email}</td>
-                          <td>
-                            <button
-                              onClick={() => handleClick(admin.id)}
-                              className="btn btn-danger"
-                            >
-                              Eliminar
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
+                    {admins &&
+                      admins.map((admin) => {
+                        return (
+                          <tr key={admin.id}>
+                            <th scope="row">{admin.id}</th>
+                            <td>{admin.firstname}</td>
+                            <td>{admin.lastname}</td>
+                            <td>{admin.email}</td>
+                            <td>
+                              <button
+                                onClick={() => handleClick(admin.id)}
+                                className="btn btn-danger"
+                              >
+                                Eliminar
+                              </button>
+                            </td>
+                          </tr>
+                        );
+                      })}
                   </tbody>
                 </table>
               </div>

@@ -18,3 +18,10 @@ export const deleteAdmin = (id) => {
     payload: id,
   };
 };
+
+export const updateAdmin = (info) => {
+  return {
+    type: "UPDATE_ADMIN",
+    payload: info,
+  };
+};

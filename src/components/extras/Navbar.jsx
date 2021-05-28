@@ -27,6 +27,8 @@ function Navbar() {
           ? "portada-product"
           : location.pathname === "/carrito"
           ? "portada-cart"
+          : location.pathname.match("/admin")
+          ? "portada-admin"
           : "portada-login-register"
       } img-fluid`}
     >
@@ -92,23 +94,22 @@ function Navbar() {
                       Registrarse
                     </NavLink>
                   </li>
-                  {/* <li className="nav-item">
-                    <NavLink
-                      className="nav-link"
-                      activeClassName="active"
-                      to="/registroAdmin"
-                    >
-                      Registrarse Admin
-                    </NavLink>
-                  </li> */}
                 </>
               ) : (
                 <>
-                  <li className="nav-item">
-                    <NavLink to="/perfil" className="nav-link custom-link">
-                      <i className="fas fa-user"></i>
-                    </NavLink>
-                  </li>
+                  {user.userRole === "ADMIN" ? (
+                    <li className="nav-item">
+                      <NavLink to="/admin" className="nav-link custom-link">
+                        <i className="fas fa-user"></i> Administrador
+                      </NavLink>
+                    </li>
+                  ) : (
+                    <li className="nav-item">
+                      <NavLink to="/perfil" className="nav-link custom-link">
+                        <i className="fas fa-user"></i>
+                      </NavLink>
+                    </li>
+                  )}
                   <li className="nav-item">
                     <button
                       className="nav-link btn custom-link"

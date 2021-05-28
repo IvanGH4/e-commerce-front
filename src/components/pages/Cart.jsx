@@ -19,7 +19,6 @@ function Cart() {
   const history = useHistory();
   const location = useLocation();
   const { addToast } = useToasts();
-  console.log(cart);
   const [total, setTotal] = useState(0);
 
   const checkoutOrder = async () => {
@@ -39,14 +38,20 @@ function Cart() {
 
   const handleClick = () => {
     if (user) {
-      dispatch(clearCart());
-      addToast(
-        "Gracias por tu compra! Se te ha enviado un correo electrónico con la verificación.",
-        { appearance: "success", autoDismiss: true }
-      );
-      checkoutOrder();
+      if (user.userRole === "CLIENT") {
+        dispatch(clearCart());
+        addToast(
+          "Gracias por tu compra! Se te ha enviado un correo electrónico con la verificación.",
+          { appearance: "success", autoDismiss: true }
+        );
+        checkoutOrder();
+      } else {
+        addToast(
+          "Para realizar esta acción debes estar registrado como cliente",
+          { appearance: "error", autoDismiss: true }
+        );
+      }
     } else {
-      console.log(location.pathname);
       dispatch(setPrevRoute(location.pathname));
       history.push("/iniciarSesion");
     }

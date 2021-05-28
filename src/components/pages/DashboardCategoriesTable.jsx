@@ -53,6 +53,11 @@ function DashboardCategoriesTable() {
   return (
     <div>
       <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-6 text-center">
+            <h2 className="heading-section">Categorías</h2>
+          </div>
+        </div>
         <div className="row justify-content-center mt-5">
           <DashNewCategoryForm />
           <DashUpdateCategoryForm />
@@ -61,11 +66,6 @@ function DashboardCategoriesTable() {
 
       <section className="ftco-section">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-6 text-center mb-5">
-              <h2 className="heading-section">Categorías</h2>
-            </div>
-          </div>
           <div className="row">
             <div className="col-md-12">
               <div className="table-wrap">

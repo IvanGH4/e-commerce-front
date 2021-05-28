@@ -6,7 +6,7 @@
 .pnp.js
 
 #Imanges
-\src\assets
+# \src\assets
 /assets
 *assets
 

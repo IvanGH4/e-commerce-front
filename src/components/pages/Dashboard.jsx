@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Switch, useLocation } from "react-router-dom";
 import DashboardCategoriesTable from "./DashboardCategoriesTable";
 import HomeAdmin from "../HomeAdmin";
 import DashboardProductsTable from "./DashboardProductsTable";
+import DashboardAdminsTable from "./DashboardAdminsTable";
 
 export default function Dashboard() {
   const location = useLocation();
@@ -56,9 +57,11 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <div className="text-xs fw-bold text-info text-uppercase mb-1">
-                      Administradores
-                    </div>
+                    <Link to="/admin/administradores">
+                      <div className="text-xs fw-bold text-info text-uppercase mb-1">
+                        Administradores
+                      </div>
+                    </Link>
                   </div>
                   <div className="col-auto">
                     <i className="fas fa-clipboard-list fa-2x "></i>
@@ -98,6 +101,10 @@ export default function Dashboard() {
         <PrivateRoute
           path="/admin/productos"
           component={DashboardProductsTable}
+        />
+        <PrivateRoute
+          path="/admin/administradores"
+          component={DashboardAdminsTable}
         />
       </Switch>
     </BrowserRouter>

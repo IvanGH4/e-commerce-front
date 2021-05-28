@@ -6,6 +6,7 @@ import categoriesReducer from "./categoriesReducer";
 import cartReducer from "./cartReducer";
 import prevRouteReducer from "./prevRouteReducer";
 import productsReducer from "./productsReducer";
+import adminsReducer from "./adminsReducer";
 
 const persistConfig = {
   key: "root",
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   cart: cartReducer,
   prevRoute: prevRouteReducer,
   products: productsReducer,
+  admins: adminsReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -140,3 +140,8 @@ body {
 .about i {
   color: #474554;
 }
+
+.form-check-input:checked {
+  background-color: #ffa36c;
+  border-color: #ffa36c;
+}

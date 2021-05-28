@@ -10,19 +10,19 @@ function Footer() {
           <div className="row justify-content-between align-items-center">
             <div className="col-md-4">
               <p className="text-center fs-5 m-0">
-                <i class="fas fa-shipping-fast"></i> Tus envíos a partir del día
-                siguiente
+                <i className="fas fa-shipping-fast"></i> Tus envíos a partir del
+                día siguiente
               </p>
             </div>
             <div className="col-md-4">
               <p className="text-center fs-5 m-0">
-                <i class="fas fa-box"></i> Envíos gratis a partir de $2500
+                <i className="fas fa-box"></i> Envíos gratis a partir de $2500
               </p>
             </div>
             <div className="col-md-4">
               <p className="text-center fs-5 m-0">
-                <i class="fas fa-stopwatch"></i> Retiros y devoluciones gratis
-                en el local
+                <i className="fas fa-stopwatch"></i> Retiros y devoluciones
+                gratis en el local
               </p>
             </div>
           </div>

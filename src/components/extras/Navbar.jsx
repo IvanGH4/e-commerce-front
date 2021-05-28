@@ -68,7 +68,7 @@ function Navbar() {
                   activeClassName="active"
                   to="/carrito"
                 >
-                  <i class="fas fa-cart-plus me-1"></i>
+                  <i className="fas fa-cart-plus me-1"></i>
                   <span>{cart.length}</span>
                 </NavLink>
               </li>

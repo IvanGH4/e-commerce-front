@@ -21,10 +21,10 @@ function SearchBox({ setProducts }) {
   return (
     <div className="mt-5">
       <form onSubmit={handleSubmit} className="d-flex align-items-center">
-        <div class="input-group mb-3 ">
+        <div className="input-group mb-3 ">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Busca entre las categorías..."
             aria-label="Busca en todas las categorías..."
             aria-describedby="button-addon2"
@@ -32,7 +32,7 @@ function SearchBox({ setProducts }) {
             onChange={handleChange}
             name="search"
           />
-          <button class="btn search-btn" type="submit" id="button-addon2">
+          <button className="btn search-btn" type="submit" id="button-addon2">
             Buscar
           </button>
         </div>

@@ -79,7 +79,7 @@ function ProductCard({ product }) {
               Quiero este producto
             </Link>
             <button className="btn add-to-cart-btn" onClick={handleClick}>
-              <i class="fas fa-cart-plus"></i>
+              <i className="fas fa-cart-plus"></i>
             </button>
           </div>
         </div> */}

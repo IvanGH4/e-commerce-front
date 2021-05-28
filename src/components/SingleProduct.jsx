@@ -118,7 +118,7 @@ function SingleProduct() {
           <div className="col-md-5 my-4">
             <div className="my-3">
               {product.featured && (
-                <span class="badge rounded-pill badge-custom my-3">
+                <span className="badge rounded-pill badge-custom my-3">
                   Producto Destacado
                 </span>
               )}
@@ -152,24 +152,24 @@ function SingleProduct() {
             </select>
             <button className="btn add-to-cart-btn my-3" onClick={handleClick}>
               {" "}
-              Agregar al Carrito <i class="fas fa-cart-plus"></i>{" "}
+              Agregar al Carrito <i className="fas fa-cart-plus"></i>{" "}
             </button>
 
-            <div class="payment-list">Compra online con:</div>
+            <div className="payment-list">Compra online con:</div>
 
-            <div class="cnt">
-              <ul class="d-inline d-flex list-unstyled justify-content-between flex-column flex-md-row">
-                <li class="fs-3">
-                  <i class="fab fa-cc-visa text-dark"></i>
+            <div className="cnt">
+              <ul className="d-inline d-flex list-unstyled justify-content-between flex-column flex-md-row">
+                <li className="fs-3">
+                  <i className="fab fa-cc-visa text-dark"></i>
                 </li>
-                <li class="fs-3">
-                  <i class="fab fa-cc-mastercard text-dark"></i>
+                <li className="fs-3">
+                  <i className="fab fa-cc-mastercard text-dark"></i>
                 </li>
-                <li class="fs-3">
-                  <i class="fab fa-cc-diners-club text-dark"></i>
+                <li className="fs-3">
+                  <i className="fab fa-cc-diners-club text-dark"></i>
                 </li>
-                <li class="fs-3">
-                  <i class="fab fa-cc-paypal text-dark"></i>
+                <li className="fs-3">
+                  <i className="fab fa-cc-paypal text-dark"></i>
                 </li>
               </ul>
             </div>

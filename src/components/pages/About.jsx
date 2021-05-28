@@ -53,10 +53,10 @@ function About() {
           </div>
           <div className="d-flex justify-content-between align-items-center flex-wrap fs-4 mt-3">
             <i className="fab fa-react"></i>
-            <i class="fab fa-node"></i>
-            <i class="fas fa-database"></i>
-            <i class="fab fa-aws"></i>
-            <i class="fab fa-google"></i>
+            <i className="fab fa-node"></i>
+            <i className="fas fa-database"></i>
+            <i className="fab fa-aws"></i>
+            <i className="fab fa-google"></i>
             <i className="fab fa-github"></i>
             <i className="fab fa-bootstrap"></i>
             <i className="fab fa-font-awesome"></i>

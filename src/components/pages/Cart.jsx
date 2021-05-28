@@ -109,7 +109,7 @@ function Cart() {
                                 dispatch(decreaseQty(item.product.id))
                               }
                             >
-                              <i class="fas fa-minus"></i>
+                              <i className="fas fa-minus"></i>
                             </button>
 
                             <button
@@ -118,7 +118,7 @@ function Cart() {
                                 dispatch(increaseQty(item.product.id))
                               }
                             >
-                              <i class="fas fa-plus"></i>
+                              <i className="fas fa-plus"></i>
                             </button>
                           </div>
                         </div>

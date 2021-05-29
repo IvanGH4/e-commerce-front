@@ -145,3 +145,8 @@ body {
   background-color: #ffa36c;
   border-color: #ffa36c;
 }
+
+.active-dashboard-link div{
+  text-decoration: underline;
+  
+}

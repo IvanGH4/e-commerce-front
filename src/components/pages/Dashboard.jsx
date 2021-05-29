@@ -1,12 +1,19 @@
 import React from "react";
 import PrivateRoute from "../PrivateRoute";
-import { BrowserRouter, Link, Switch, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  NavLink,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import DashboardCategoriesTable from "./DashboardCategoriesTable";
 import HomeAdmin from "../HomeAdmin";
 import DashboardProductsTable from "./DashboardProductsTable";
 import DashboardAdminsTable from "./DashboardAdminsTable";
 import DashUpdateCategoryForm from "../DashUpdateCategoryForm";
 import DashUpdateProdForm from "../DashUpdateProdForm";
+import DashUpdateAdminForm from "../DashUpdateAdminForm";
 
 export default function Dashboard() {
   const location = useLocation();
@@ -21,14 +28,15 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link
+                    <NavLink
                       to="/admin/categorias"
+                      activeClassName="active-dashboard-link"
                       className="text-decoration-none"
                     >
                       <div className="text-xs fw-bold text-primary text-uppercase mb-1 ">
                         Categorias
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                   <div className="col-auto">
                     <i className="fas fa-list fs-2"></i>
@@ -43,14 +51,15 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link
+                    <NavLink
                       to="/admin/productos"
+                      activeClassName="active-dashboard-link"
                       className="text-decoration-none"
                     >
                       <div className="text-xs fw-bold text-success text-uppercase mb-1">
                         Productos
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                   <div className="col-auto">
                     <i class="fas fa-laptop fs-2"></i>
@@ -65,14 +74,15 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link
+                    <NavLink
                       to="/admin/administradores"
+                      activeClassName="active-dashboard-link"
                       className="text-decoration-none"
                     >
                       <div className="text-xs fw-bold text-info text-uppercase mb-1">
                         Administradores
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                   <div className="col-auto">
                     <i className="fas fa-users fs-2"></i>
@@ -87,11 +97,15 @@ export default function Dashboard() {
               <div className="card-body">
                 <div className="row g-0 align-items-center">
                   <div className="col me-2">
-                    <Link to="/admin" className="text-decoration-none">
+                    <NavLink
+                      to="/admin"
+                      activeClassName="active-dashboard-link"
+                      className="text-decoration-none"
+                    >
                       <div className="text-xs fw-bold text-warning text-uppercase mb-1">
                         Página principal
                       </div>
-                    </Link>
+                    </NavLink>
                   </div>
                   <div className="col-auto">
                     <i class="fas fa-house-user fs-2"></i>
@@ -117,6 +131,7 @@ export default function Dashboard() {
         />
         <PrivateRoute
           path="/admin/administradores"
+          exact
           component={DashboardAdminsTable}
         />
         <PrivateRoute
@@ -128,6 +143,11 @@ export default function Dashboard() {
           path="/admin/categorias/:id"
           exact
           component={DashUpdateCategoryForm}
+        />
+        <PrivateRoute
+          path="/admin/administradores/:id"
+          exact
+          component={DashUpdateAdminForm}
         />
       </Switch>
     </BrowserRouter>

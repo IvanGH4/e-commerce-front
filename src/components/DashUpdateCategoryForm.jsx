@@ -3,9 +3,9 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCategory } from "../redux/categoriesActions";
 
-function DashUpdateCategoryForm() {
-  const [name, setName] = useState("");
-  const [id, setId] = useState("");
+function DashUpdateCategoryForm({ category }) {
+  const [name, setName] = useState(category.name);
+  const [id, setId] = useState(category.id);
   const [img, setImg] = useState("");
 
   const user = useSelector((state) => state.user);
@@ -35,9 +35,9 @@ function DashUpdateCategoryForm() {
   };
 
   return (
-    <div className="col-md-6">
-      <div className="my-custom-card p-5">
-        <h2>Actualiza una categoría</h2>
+    <div className="col">
+      <div className="p-5">
+        <h2 className="mb-3">Actualiza una categoría</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -69,7 +69,7 @@ function DashUpdateCategoryForm() {
             />
           </div>
 
-          <button className="btn" type="submit">
+          <button className="btn btn-success" type="submit">
             Actualizar
           </button>
         </form>

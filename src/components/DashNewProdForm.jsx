@@ -56,9 +56,9 @@ function DashNewProdForm() {
     setProductImg3("");
   };
   return (
-    <div className="col-md-6">
-      <div className="my-custom-card p-5">
-        <h2>Crea un producto</h2>
+    <div className="col">
+      <div className="p-5">
+        <h2 className="mb-4">Crea un producto</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -174,7 +174,8 @@ function DashNewProdForm() {
             <label htmlFor="notFeatured" className="form-check-label">
               <input
                 name="notFeatured"
-                className="form-check-input"
+                className="form-check-input
+                mb-3"
                 type="radio"
                 value="false"
                 onChange={(e) => setFeatured(e.target.value)}
@@ -184,7 +185,7 @@ function DashNewProdForm() {
             </label>
           </div>
 
-          <button className="btn" type="submit">
+          <button className="btn btn-success" type="submit">
             Crear
           </button>
         </form>

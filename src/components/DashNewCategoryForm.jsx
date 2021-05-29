@@ -31,8 +31,8 @@ function DashNewCategoryForm() {
   };
 
   return (
-    <div className="col-md-6">
-      <div className="my-custom-card p-5">
+    <div className="col">
+      <div className="p-5">
         <h2>Crea una categoría</h2>
 
         <form onSubmit={handleSubmit}>
@@ -55,7 +55,7 @@ function DashNewCategoryForm() {
             />
           </div>
 
-          <button className="btn" type="submit">
+          <button className="btn btn-success" type="submit">
             Crear
           </button>
         </form>

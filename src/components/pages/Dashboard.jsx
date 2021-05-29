@@ -5,6 +5,8 @@ import DashboardCategoriesTable from "./DashboardCategoriesTable";
 import HomeAdmin from "../HomeAdmin";
 import DashboardProductsTable from "./DashboardProductsTable";
 import DashboardAdminsTable from "./DashboardAdminsTable";
+import DashUpdateCategoryForm from "../DashUpdateCategoryForm";
+import DashUpdateProdForm from "../DashUpdateProdForm";
 
 export default function Dashboard() {
   const location = useLocation();
@@ -109,11 +111,17 @@ export default function Dashboard() {
         />
         <PrivateRoute
           path="/admin/productos"
+          exact
           component={DashboardProductsTable}
         />
         <PrivateRoute
           path="/admin/administradores"
           component={DashboardAdminsTable}
+        />
+        <PrivateRoute
+          path="/admin/productos/:slug"
+          exact
+          component={DashUpdateProdForm}
         />
       </Switch>
     </BrowserRouter>

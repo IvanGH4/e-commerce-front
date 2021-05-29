@@ -5,6 +5,7 @@ import { setProducts, removeProduct } from "../../redux/productsActions";
 import DashNewProdForm from "../DashNewProdForm";
 import DashUpdateProdForm from "../DashUpdateProdForm";
 import { useToasts } from "react-toast-notifications";
+import { Link } from "react-router-dom";
 
 function DashboardProductsTable() {
   const products = useSelector((state) => state.products);
@@ -53,10 +54,14 @@ function DashboardProductsTable() {
           <h2 className="heading-section css-h2">Productos</h2>
         </div>
       </div>
-      <div className="row justify-content-center mt-5">
-        <DashNewProdForm />
-        <DashUpdateProdForm />
-      </div>
+      <button
+        className="btn justify-content-start"
+        data-bs-toggle="modal"
+        data-bs-target="#createModal"
+      >
+        <i className="fas fa-plus-square fs-1"> Crear</i>
+      </button>
+      <div className="row justify-content-center mt-5"> </div>
 
       <section className="ftco-section mt-5">
         <div className="row">
@@ -89,15 +94,53 @@ function DashboardProductsTable() {
                           <td>
                             <button
                               onClick={() => handleClick(product.id)}
-                              className="btn btn-danger"
+                              className="btn "
                             >
-                              Eliminar
+                              <i className="fas fa-trash-alt"></i>
                             </button>
                           </td>
+                          <td>
+                            <Link
+                              to={`/admin/productos/${product.slug}`}
+                              className="btn"
+                            >
+                              <i className="fas fa-edit"></i>
+                            </Link>
+                          </td>
+                          <td></td>
                         </tr>
                       );
                     })}
                 </tbody>
+                <div
+                  class="modal fade"
+                  id="createModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content bg-white">
+                      <div class="modal-header">
+                        <h5
+                          class="modal-title css-h2 fs-2"
+                          id="exampleModalLabel"
+                        >
+                          HackGaming
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <DashNewProdForm />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </table>
             </div>
           </div>

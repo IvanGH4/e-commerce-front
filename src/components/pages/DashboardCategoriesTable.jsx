@@ -58,10 +58,7 @@ function DashboardCategoriesTable() {
             <h2 className="heading-section css-h2">Categorías</h2>
           </div>
         </div>
-        <div className="row justify-content-center mt-5">
-          <DashNewCategoryForm />
-          <DashUpdateCategoryForm />
-        </div>
+        <div className="row justify-content-center mt-5"></div>
       </div>
 
       <section className="ftco-section">
@@ -87,15 +84,87 @@ function DashboardCategoriesTable() {
                           <td>
                             <button
                               onClick={() => handleClick(category.id)}
-                              className="btn btn-danger"
+                              className="btn"
                             >
-                              Eliminar
+                              <i className="fas fa-trash-alt"></i>
+                            </button>
+                            <button
+                              className="btn"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editModal"
+                            >
+                              <i className="fas fa-edit"></i>
+                            </button>
+                            <button
+                              className="btn"
+                              data-bs-toggle="modal"
+                              data-bs-target="#createModal"
+                            >
+                              <i className="fas fa-plus-square"></i>
                             </button>
                           </td>
+                          <div
+                            className="modal fade"
+                            id="editModal"
+                            tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"
+                          >
+                            <div className="modal-dialog modal-lg">
+                              <div className="modal-content">
+                                <div className="modal-header">
+                                  <h5
+                                    className="modal-title css-h2 fs-3"
+                                    id="exampleModalLabel"
+                                  >
+                                    HackGaming
+                                  </h5>
+                                  <button
+                                    type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                  ></button>
+                                </div>
+                                <div className="modal-body">
+                                  <DashUpdateCategoryForm category={category} />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </tr>
                       );
                     })}
                   </tbody>
+                  <div
+                    className="modal fade"
+                    id="createModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div className="modal-dialog modal-lg bg-white">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title css-h2 fs-3"
+                            id="exampleModalLabel"
+                          >
+                            HackGaming
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="modal-body">
+                          <DashNewCategoryForm />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </table>
               </div>
             </div>

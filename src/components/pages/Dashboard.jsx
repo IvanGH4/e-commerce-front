@@ -100,6 +100,7 @@ export default function Dashboard() {
                     <NavLink
                       to="/admin"
                       activeClassName="active-dashboard-link"
+                      exact
                       className="text-decoration-none"
                     >
                       <div className="text-xs fw-bold text-warning text-uppercase mb-1">

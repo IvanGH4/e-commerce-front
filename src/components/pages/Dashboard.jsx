@@ -107,6 +107,7 @@ export default function Dashboard() {
       <Switch>
         <PrivateRoute
           path="/admin/categorias"
+          exact
           component={DashboardCategoriesTable}
         />
         <PrivateRoute
@@ -122,6 +123,11 @@ export default function Dashboard() {
           path="/admin/productos/:slug"
           exact
           component={DashUpdateProdForm}
+        />
+        <PrivateRoute
+          path="/admin/categorias/:id"
+          exact
+          component={DashUpdateCategoryForm}
         />
       </Switch>
     </BrowserRouter>

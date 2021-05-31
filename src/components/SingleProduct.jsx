@@ -59,7 +59,7 @@ function SingleProduct() {
           <Loader />
         </div>
       ) : (
-        <div className="row my-5">
+        <div className="row my-5 bg-white p-4">
           <div className="col-md-4 my-4">
             <div
               id="carouselExampleControls"

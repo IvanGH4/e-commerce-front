@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function FeaturedProduct({ product }) {
   return (
-    <div className="cardglobal text-center custom-category-card">
+    <div
+      className="cardglobal text-center custom-category-card py-5
+    "
+    >
       <Link
         className="text-decoration-none text-dark"
         to={`/productos/${product.slug}`}

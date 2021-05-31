@@ -5,6 +5,7 @@ import { setAdmins, deleteAdmin } from "../../redux/adminsActions";
 import DashNewAdminForm from "../DashNewAdminForm";
 import { useToasts } from "react-toast-notifications";
 import DashUpdateAdminForm from "../DashUpdateAdminForm";
+import { Link } from "react-router-dom";
 
 function DashboardAdminsTable() {
   const user = useSelector((state) => state.user);
@@ -69,9 +70,16 @@ function DashboardAdminsTable() {
               <h2 className="heading-section css-h2">Administradores</h2>
             </div>
           </div>
-          <div className="row">
-            <DashNewAdminForm />
-            <DashUpdateAdminForm />
+          <div className="row justify-content-start">
+            <div>
+              <button
+                className="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#createModal"
+              >
+                <i className="fas fa-plus-square"></i> Crear un administrador
+              </button>
+            </div>
           </div>
           <div className="row">
             <div className="col-md-12">
@@ -99,15 +107,50 @@ function DashboardAdminsTable() {
                             <td>
                               <button
                                 onClick={() => handleClick(admin.id)}
-                                className="btn btn-danger"
+                                className="btn"
                               >
-                                Eliminar
+                                <i className="fas fa-trash-alt"></i>
                               </button>
+                              <Link
+                                to={`/admin/administradores/${admin.id}`}
+                                className="btn"
+                              >
+                                <i className="fas fa-edit"></i>
+                              </Link>
                             </td>
                           </tr>
                         );
                       })}
                   </tbody>
+                  <div
+                    className="modal fade"
+                    id="createModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div className="modal-dialog modal-lg bg-white">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5
+                            className="modal-title css-h2 fs-3"
+                            id="exampleModalLabel"
+                          >
+                            HackGaming
+                          </h5>
+                          <button
+                            type="button"
+                            className="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div className="modal-body">
+                          <DashNewAdminForm />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </table>
               </div>
             </div>

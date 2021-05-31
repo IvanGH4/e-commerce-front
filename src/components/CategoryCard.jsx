@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function CategoryCard({ category }) {
   return (
-    <div className="my-3 cardglobal text-center custom-category-card">
+    <div
+      className="my-3 cardglobal text-center custom-category-card py-4
+    "
+    >
       <Link
         className="text-decoration-none text-dark"
         to={`/categorias/${category.name}/${category.id}`}

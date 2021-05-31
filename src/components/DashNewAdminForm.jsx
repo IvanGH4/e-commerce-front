@@ -31,8 +31,8 @@ function DashNewAdminForm() {
   };
 
   return (
-    <div className="col-md-6">
-      <div className="my-custom-card p-5">
+    <div className="col">
+      <div className=" p-5">
         <h2>Nuevo Administrador</h2>
 
         <form onSubmit={handleSubmit}>
@@ -77,7 +77,7 @@ function DashNewAdminForm() {
             />
           </div>
 
-          <button className="btn" type="submit">
+          <button className="btn btn-success" type="submit">
             Crear
           </button>
         </form>

@@ -54,14 +54,18 @@ function DashboardProductsTable() {
           <h2 className="heading-section css-h2">Productos</h2>
         </div>
       </div>
-      <button
-        className="btn justify-content-start"
-        data-bs-toggle="modal"
-        data-bs-target="#createModal"
-      >
-        <i className="fas fa-plus-square fs-1"> Crear</i>
-      </button>
-      <div className="row justify-content-center mt-5"> </div>
+
+      <div className="row justify-content-center mt-5">
+        <div className="fs-3 justify-content-start">
+          <button
+            className="btn "
+            data-bs-toggle="modal"
+            data-bs-target="#createModal"
+          >
+            <i className="fas fa-plus-square"></i> Crear un producto
+          </button>
+        </div>
+      </div>
 
       <section className="ftco-section mt-5">
         <div className="row">

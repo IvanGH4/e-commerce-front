@@ -3,8 +3,20 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+import {
+  ResponsiveContainer,
+  AreaChart,
+  XAxis,
+  YAxis,
+  Area,
+  Tooltip,
+  CartesianGrid,
+} from "recharts";
+
 function HomeAdmin() {
   const [orders, setOrders] = useState([]);
+  const [dates, setDates] = useState([]);
+  const [money, setMoney] = useState([]);
 
   const user = useSelector((state) => state.user);
 
@@ -20,7 +32,27 @@ function HomeAdmin() {
         }
       );
       setOrders(response.data);
-      console.log(response.data);
+
+      let datesArr = [];
+      response.data.forEach((order) => {
+        datesArr.push(order.createdAt);
+      });
+
+      let prices = {};
+      response.data.forEach((order) => {
+        order.products.map((item) => {
+          prices[item.id] =
+            Number(item.orderProduct.productQuantity) *
+            Number(item.orderProduct.unitPrice);
+        });
+      });
+
+      let pricesArr = [];
+      for (let item in prices) {
+        pricesArr.push(prices[item]);
+      }
+      setDates(datesArr);
+      setMoney(pricesArr);
     };
     getOrders();
   }, []);
@@ -40,7 +72,11 @@ function HomeAdmin() {
 
                 <div className="card-body">
                   <div className="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                    <ResponsiveContainer>
+                      <AreaChart data={money}>
+                        <Area dataKey="value"></Area>
+                      </AreaChart>
+                    </ResponsiveContainer>
                   </div>
                 </div>
               </div>

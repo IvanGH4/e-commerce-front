@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userActions";
 
 import "../css/Navbar.css";
+import { useState } from "react";
 
 function Navbar() {
   const location = useLocation();
@@ -15,21 +16,23 @@ function Navbar() {
 
   const cart = useSelector((state) => state.cart);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header
       className={`${
         location.pathname === "/"
-          ? "portada-home"
+          ? `portada-home ${isMenuOpen && "active"}`
           : location.pathname === "/shop" ||
             location.pathname.match("/categorias")
-          ? "portada-shop"
+          ? `portada-shop ${isMenuOpen && "active"}`
           : location.pathname.match("/productos")
-          ? "portada-product"
+          ? `portada-product ${isMenuOpen && "active"}`
           : location.pathname === "/carrito"
-          ? "portada-cart"
+          ? `portada-cart ${isMenuOpen && "active"}`
           : location.pathname.match("/admin")
-          ? "portada-admin"
-          : "portada-login-register"
+          ? `portada-admin ${isMenuOpen && "active"}`
+          : `portada-login-register ${isMenuOpen && "active"}`
       } img-fluid`}
     >
       <nav className="navbar navbar-expand-lg bg-light">
@@ -43,8 +46,17 @@ function Navbar() {
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <span className="navbar-toggler-icon"></span>
+              {/* <span className="navbar-toggler-icon"></span>
+               */}
+              <span>
+                {!isMenuOpen ? (
+                  <i className="fas fa-bars"></i>
+                ) : (
+                  <i className="fas fa-times"></i>
+                )}
+              </span>
             </button>
             <NavLink
               className="text-decoration-none my-brand-style custom-color-font"

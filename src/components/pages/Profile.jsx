@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
@@ -7,6 +7,7 @@ function Profile() {
   const user = useSelector((state) => state.user);
   const [isFormShow, setIsFormShow] = useState(false);
   const [password, setPassword] = useState("");
+  const [orders, setOrders] = useState([]);
 
   const { addToast } = useToasts();
 
@@ -35,6 +36,24 @@ function Profile() {
     setPassword("");
   };
 
+  useEffect(() => {
+    const getClientOrders = async () => {
+      const response = await axios.get(
+        process.env.REACT_APP_API_URL + "/orders",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      let clientOrders = response.data.filter(
+        (order) => order.clientId === user.userId
+      );
+      setOrders(clientOrders);
+    };
+    getClientOrders();
+  });
+
   return (
     <div className="container">
       <div className="row">
@@ -60,6 +79,30 @@ function Profile() {
             </button>
           </form>
         )}
+      </div>
+      <div className="row bg-white p-4">
+        <h4 className="css-h2 mb-3">Tus pedidos</h4>
+        <ul>
+          {orders &&
+            orders.map((order) => {
+              return (
+                <li key={order.id} className="my-3">
+                  {order.createdAt}
+                  {order.products.map((product) => {
+                    return (
+                      <span key={product.id}>
+                        {product.name} - ${product.orderProduct.unitPrice} X{" "}
+                        {product.orderProduct.productQuantity}
+                      </span>
+                    );
+                  })}
+                  <span className="bagde badge-custom rounded-pill text-light px-2 py-1 ms-2">
+                    {order.status}
+                  </span>
+                </li>
+              );
+            })}
+        </ul>
       </div>
     </div>
   );

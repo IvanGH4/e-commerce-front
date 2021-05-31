@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PrivateRoute from "../PrivateRoute";
 import { BrowserRouter, Link, Switch, useLocation } from "react-router-dom";
 import DashboardCategoriesTable from "./DashboardCategoriesTable";
@@ -7,11 +7,11 @@ import DashboardProductsTable from "./DashboardProductsTable";
 import DashboardAdminsTable from "./DashboardAdminsTable";
 import DashUpdateCategoryForm from "../DashUpdateCategoryForm";
 import DashUpdateProdForm from "../DashUpdateProdForm";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import DashUpdateOrder from "../DashUpdateOrder";
 
 export default function Dashboard() {
-  const location = useLocation();
-  console.log(location.pathname);
-
   return (
     <BrowserRouter>
       <div className="container-fluid">
@@ -122,6 +122,11 @@ export default function Dashboard() {
           path="/admin/productos/:slug"
           exact
           component={DashUpdateProdForm}
+        />
+        <PrivateRoute
+          path="/admin/ordenes/:id"
+          exact
+          component={DashUpdateOrder}
         />
       </Switch>
     </BrowserRouter>

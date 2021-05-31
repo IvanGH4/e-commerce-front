@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 function HomeAdmin() {
+  const [orders, setOrders] = useState([]);
+
+  const user = useSelector((state) => state.user);
+
+  useEffect(() => {
+    const getOrders = async () => {
+      const response = await axios.get(
+        process.env.REACT_APP_API_URL + "/orders",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      setOrders(response.data);
+      console.log(response.data);
+    };
+    getOrders();
+  }, []);
+
   return (
     <div>
       <div id="wrapper" className="pt-3">
@@ -64,27 +87,61 @@ function HomeAdmin() {
                 <table className="table table-striped">
                   <thead>
                     <tr>
-                      <th>Invoce</th>
-                      <th>Customer</th>
-                      <th>Ship</th>
-                      <th>Price</th>
-                      <th>Pruchased Price</th>
-                      <th>Status</th>
+                      <th>Id</th>
+                      <th>Cliente Id</th>
+                      <th>Fecha de pedido</th>
+                      <th>Productos/PrecioXCantidad</th>
+                      {/* <th>Precio total</th> */}
+                      <th>Estado</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1001</th>
-                      <td>Mark Otto</td>
-                      <td>Japan</td>
-                      <td>$3000</td>
-                      <td>$1200</td>
-                      <td>
-                        <a href="#" className="btn btn-success">
-                          Progress
-                        </a>
-                      </td>
-                    </tr>
+                    {orders &&
+                      orders.map((order) => {
+                        return (
+                          <tr key={order.id}>
+                            <th scope="row">{order.id}</th>
+                            <td>{order.clientId}</td>
+                            <td>{order.createdAt}</td>
+                            <td>
+                              <ul className="list-unstyled">
+                                {order.products.map((product) => {
+                                  return (
+                                    <li key={product.id}>
+                                      {product.name} - $
+                                      {product.orderProduct.unitPrice} X{" "}
+                                      {product.orderProduct.productQuantity}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </td>
+                            {/* <td>
+                              {order.products.map((item) => {
+                                Object.keys(item.orderProduct).map((key) => {
+                                  let total = 0;
+                                  if (
+                                    key === "unitPrice" ||
+                                    key === "productQuantity"
+                                  ) {
+                                    total += item.orderProduct[key];
+                                  }
+                                  return <p>{total}</p>;
+                                });
+                              })}
+                            </td> */}
+                            <td>
+                              {order.status}
+                              <Link
+                                to={`/admin/ordenes/${order.id}`}
+                                className="btn"
+                              >
+                                <i className="fas fa-edit"></i>
+                              </Link>
+                            </td>
+                          </tr>
+                        );
+                      })}
                   </tbody>
                 </table>
               </div>

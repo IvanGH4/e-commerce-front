@@ -11,12 +11,13 @@ import {
   Area,
   Tooltip,
   CartesianGrid,
+  Line,
+  LineChart,
 } from "recharts";
 
 function HomeAdmin() {
   const [orders, setOrders] = useState([]);
-  const [dates, setDates] = useState([]);
-  const [money, setMoney] = useState([]);
+  const [chartData, setChartData] = useState([]);
 
   const user = useSelector((state) => state.user);
 
@@ -38,21 +39,25 @@ function HomeAdmin() {
         datesArr.push(order.createdAt);
       });
 
-      let prices = {};
+      let pricesArr = [];
+
       response.data.forEach((order) => {
         order.products.map((item) => {
-          prices[item.id] =
-            Number(item.orderProduct.productQuantity) *
-            Number(item.orderProduct.unitPrice);
+          pricesArr.push(item.price);
         });
       });
 
-      let pricesArr = [];
-      for (let item in prices) {
-        pricesArr.push(prices[item]);
+      const globalData = [];
+
+      for (let i = 0; i < datesArr.length; i++) {
+        globalData.push({
+          date: datesArr[i].slice(0, 10),
+          price: pricesArr[i],
+        });
       }
-      setDates(datesArr);
-      setMoney(pricesArr);
+      console.log(globalData);
+
+      setChartData(globalData);
     };
     getOrders();
   }, []);
@@ -62,46 +67,25 @@ function HomeAdmin() {
       <div id="wrapper" className="pt-3">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-xl-8 col-lg-7">
+            <div className="col">
               <div className="card shadow mb-4">
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 fw-bold text-primary">
-                    Earnings Overview
+                    Resumen de Ganancias Parciales
                   </h6>
                 </div>
 
                 <div className="card-body">
                   <div className="chart-area">
-                    <ResponsiveContainer>
-                      <AreaChart data={money}>
-                        <Area dataKey="value"></Area>
+                    <ResponsiveContainer width="100%" height={400}>
+                      <AreaChart data={chartData}>
+                        <Area dataKey="price"></Area>
+                        <XAxis dataKey="date"></XAxis>
+                        <YAxis dataKey="price"></YAxis>
+                        <Tooltip></Tooltip>
+                        <CartesianGrid />
                       </AreaChart>
                     </ResponsiveContainer>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-4 col-lg-5">
-              <div className="card shadow mb-4">
-                <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 className="m-0 fw-bold text-primary">Revenue Sources</h6>
-                </div>
-
-                <div className="card-body">
-                  <div className="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div className="mt-4 text-center small">
-                    <span className="me-2">
-                      <i className="fas fa-circle text-primary"></i> Direct
-                    </span>
-                    <span className="me-2">
-                      <i className="fas fa-circle text-success"></i> Social
-                    </span>
-                    <span className="me-2">
-                      <i className="fas fa-circle text-info"></i> Referral
-                    </span>
                   </div>
                 </div>
               </div>

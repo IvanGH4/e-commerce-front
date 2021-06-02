@@ -101,7 +101,7 @@ function DashUpdateAdminForm() {
               </div>
 
               <button className="btn btn-success" type="submit">
-                Crear
+                Actualizar
               </button>
             </form>
           </div>

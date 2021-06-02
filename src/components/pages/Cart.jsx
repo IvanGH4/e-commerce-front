@@ -22,7 +22,7 @@ function Cart() {
   const [total, setTotal] = useState(0);
 
   const checkoutOrder = async () => {
-    await axios.post(
+    const response = await axios.post(
       process.env.REACT_APP_API_URL + "/orders",
       {
         cart,
@@ -34,6 +34,7 @@ function Cart() {
         },
       }
     );
+    window.location.replace(response.data.redirectURL);
   };
 
   const handleClick = () => {
@@ -150,8 +151,12 @@ function Cart() {
                   <button className="btn btn-success" onClick={handleClick}>
                     <span>MercadoPago</span>
                   </button>
-                  <button className="btn btn-success" onClick={handleClick}>
-                    <span>PayPal</span>
+                  <button
+                    className="btn btn-success"
+                    disabled
+                    onClick={handleClick}
+                  >
+                    <span>Proximamente podrás con PayPal</span>
                   </button>
                 </div>
               )}

@@ -133,16 +133,16 @@ function Navbar() {
                       Cerrar Sesión
                     </button>
                   </li>
-                  <li className="nav-item">
-                    <Link
-                      className="text-decoration-none nav-link custom-link"
-                      to="/proyecto"
-                    >
-                      Sobre este Proyecto
-                    </Link>
-                  </li>
                 </>
               )}
+              <li className="nav-item">
+                <Link
+                  className="text-decoration-none nav-link custom-link"
+                  to="/proyecto"
+                >
+                  Sobre este Proyecto
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -15,7 +15,7 @@ function DashNewProdForm() {
   const [productImg2, setProductImg2] = useState("");
   const [productImg3, setProductImg3] = useState("");
   const [featured, setFeatured] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
   const user = useSelector((state) => state.user);
   const categories = useSelector((state) => state.categories);
@@ -26,6 +26,7 @@ function DashNewProdForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formData = new FormData();
+    formData.append("categoryId", selectedCategory);
     formData.append("name", productName);
     formData.append("brand", productBrand);
     formData.append("description", productDesc);
@@ -67,8 +68,12 @@ function DashNewProdForm() {
               class="form-select"
               aria-label="Selecciona una categoría"
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e) => {
+                console.log(e.target.value);
+                setSelectedCategory(e.target.value);
+              }}
             >
+              <option value={0}>Seleccione una categoría</option>
               {categories &&
                 categories.map((category) => (
                   <option value={category.id}>{category.name}</option>

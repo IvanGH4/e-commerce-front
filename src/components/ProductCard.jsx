@@ -10,17 +10,18 @@ function ProductCard({ product }) {
   const { addToast } = useToasts();
 
   const handleClick = () => {
+    setProdQty((prevValue) => prevValue + 1);
     const itemToCart = {
       product,
-      productQuantity: prodQty,
+      productQuantity: 1,
       totalPrice: product.price * prodQty,
+      fromCard: true,
     };
     dispatch(addItem(itemToCart));
     addToast("Producto añadido al carrito!", {
       appearance: "success",
       autoDismiss: true,
     });
-    setProdQty((prevValue) => prevValue + 1);
   };
 
   return (

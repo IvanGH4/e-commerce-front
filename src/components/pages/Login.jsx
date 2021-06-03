@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/userActions";
 import { Link, useHistory } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,22 +14,31 @@ function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  const { addToast } = useToasts();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post(
-      process.env.REACT_APP_API_URL + "/tokens",
-      {
-        email: email,
-        password: password,
-      },
-      { headers: { "Content-Type": "application/json" } }
-    );
-    dispatch(setUser(response.data));
-    console.log(response.data);
-    if (response.data.userRole === "ADMIN") {
-      history.push("/admin");
-    } else {
-      history.push(prevRoute);
+    try {
+      const response = await axios.post(
+        process.env.REACT_APP_API_URL + "/tokens",
+        {
+          email: email,
+          password: password,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      dispatch(setUser(response.data));
+      console.log(response);
+      if (response.data.userRole === "ADMIN") {
+        history.push("/admin");
+      } else if (response.data.userRole !== "ADMIN") {
+        history.push(prevRoute);
+      }
+    } catch (error) {
+      addToast("Credenciales incorrectas", {
+        appearance: "error",
+        autoDismiss: true,
+      });
     }
   };
   return (

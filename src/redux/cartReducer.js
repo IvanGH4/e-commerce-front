@@ -7,7 +7,9 @@ const cartReducer = (state = [], action) => {
         let productExistsOnCart = draft.find(
           (item) => item.product.id === action.payload.product.id
         );
-        if (productExistsOnCart) {
+        if (productExistsOnCart && action.payload.fromCard) {
+          productExistsOnCart.productQuantity++;
+        } else if (productExistsOnCart && !action.payload.fromCard) {
           productExistsOnCart.productQuantity =
             productExistsOnCart.productQuantity +
             action.payload.productQuantity;

@@ -24,7 +24,12 @@ function Login() {
       { headers: { "Content-Type": "application/json" } }
     );
     dispatch(setUser(response.data));
-    history.push(prevRoute);
+    console.log(response.data);
+    if (response.data.userRole === "ADMIN") {
+      history.push("/admin");
+    } else {
+      history.push(prevRoute);
+    }
   };
   return (
     <div className="container">

@@ -29,9 +29,13 @@ const cartReducer = (state = [], action) => {
         let itemToIncrease = draft.find(
           (item) => item.product.id === action.payload
         );
-        itemToIncrease.productQuantity = itemToIncrease.productQuantity + 1;
-        itemToIncrease.totalPrice =
-          itemToIncrease.productQuantity * itemToIncrease.product.price;
+        if (itemToIncrease.productQuantity === itemToIncrease.product.stock) {
+          return;
+        } else {
+          itemToIncrease.productQuantity = itemToIncrease.productQuantity + 1;
+          itemToIncrease.totalPrice =
+            itemToIncrease.productQuantity * itemToIncrease.product.price;
+        }
       });
     case "DECREASE_QTY":
       return produce(state, (draft) => {

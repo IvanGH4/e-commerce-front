@@ -17,6 +17,9 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import DashUpdateOrder from "../DashUpdateOrder";
 import DashUpdateAdminForm from "../DashUpdateAdminForm";
+import DashNewProdForm from "../DashNewProdForm";
+import DashNewAdminForm from "../DashNewAdminForm";
+import DashNewCategoryForm from "../DashNewCategoryForm";
 
 export default function Dashboard() {
   return (
@@ -154,6 +157,21 @@ export default function Dashboard() {
           path="/admin/ordenes/:id"
           exact
           component={DashUpdateOrder}
+        />
+        <PrivateRoute
+          path="/admin/nuevo-producto"
+          exact
+          component={DashNewProdForm}
+        />
+        <PrivateRoute
+          path="/admin/nuevo-admin"
+          exact
+          component={DashNewAdminForm}
+        />
+        <PrivateRoute
+          path="/admin/nueva-categoria"
+          exact
+          component={DashNewCategoryForm}
         />
       </Switch>
     </BrowserRouter>

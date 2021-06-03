@@ -45,41 +45,45 @@ function DashUpdateProdForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let info = {
-      id,
-      name: updatedName,
-      brand: updatedBrand,
-      description: updatedDesc,
-      price: updatedPrice,
-      stock: updatedStock,
-      featured: updatedFeatured === "true" ? true : false,
-    };
-    dispatch(updateProduct(info));
-    let formData = new FormData();
-    formData.append("id", id);
-    formData.append("name", updatedName);
-    formData.append("brand", updatedBrand);
-    formData.append("description", updatedDesc);
-    formData.append("img1", updatedImg1);
-    formData.append("img2", updatedImg2);
-    formData.append("img3", updatedImg3);
-    formData.append("price", updatedPrice);
-    formData.append("stock", updatedStock);
-    formData.append("featured", updatedFeatured === "false" ? false : true);
-    await axios({
-      method: "PUT",
-      url: process.env.REACT_APP_API_URL + "/products",
-      data: formData,
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
-    addToast("Se ha modificado la información del producto seleccionado", {
-      appearance: "success",
-      autoDismiss: true,
-    });
-    history.push("/admin/productos");
+    try {
+      let info = {
+        id,
+        name: updatedName,
+        brand: updatedBrand,
+        description: updatedDesc,
+        price: updatedPrice,
+        stock: updatedStock,
+        featured: updatedFeatured === "true" ? true : false,
+      };
+      dispatch(updateProduct(info));
+      let formData = new FormData();
+      formData.append("id", id);
+      formData.append("name", updatedName);
+      formData.append("brand", updatedBrand);
+      formData.append("description", updatedDesc);
+      formData.append("img1", updatedImg1);
+      formData.append("img2", updatedImg2);
+      formData.append("img3", updatedImg3);
+      formData.append("price", updatedPrice);
+      formData.append("stock", updatedStock);
+      formData.append("featured", updatedFeatured === "false" ? false : true);
+      await axios({
+        method: "PUT",
+        url: process.env.REACT_APP_API_URL + "/products",
+        data: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+      addToast("Se ha modificado la información del producto seleccionado", {
+        appearance: "success",
+        autoDismiss: true,
+      });
+      history.push("/admin/productos");
+    } catch (error) {
+      addToast("Hubo un error", { appearance: "error", autoDismiss: true });
+    }
   };
 
   useEffect(() => {
@@ -94,6 +98,9 @@ function DashUpdateProdForm() {
       );
       setId(response.data.id);
       setUpdatedName(response.data.name);
+      setUpdatedImg1(response.data.img1);
+      setUpdatedImg2(response.data.img2);
+      setUpdatedImg3(response.data.img3);
       setUpdatedBrand(response.data.brand);
       setUpdatedDesc(response.data.description);
       setUpdatedPrice(response.data.price);
@@ -154,7 +161,6 @@ function DashUpdateProdForm() {
                   className="form-control"
                   type="file"
                   onChange={(e) => setUpdatedImg1(e.target.files[0])}
-                  required
                 />
               </div>
               <div className="mb-3">
@@ -164,7 +170,6 @@ function DashUpdateProdForm() {
                   className="form-control"
                   type="file"
                   onChange={(e) => setUpdatedImg2(e.target.files[0])}
-                  required
                 />
               </div>
               <div className="mb-3">
@@ -174,7 +179,6 @@ function DashUpdateProdForm() {
                   className="form-control"
                   type="file"
                   onChange={(e) => setUpdatedImg3(e.target.files[0])}
-                  required
                 />
               </div>
               <div className="mb-3">

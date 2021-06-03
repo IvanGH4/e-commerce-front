@@ -2,6 +2,7 @@
 body {
   color: #474554;
   background-color: #d6d6d6;
+  min-height: 100vh;
 }
 .css-h2 {
   font-size: 48px;
@@ -146,7 +147,6 @@ body {
   border-color: #ffa36c;
 }
 
-.active-dashboard-link div{
+.active-dashboard-link div {
   text-decoration: underline;
-  
 }

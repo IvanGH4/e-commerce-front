@@ -96,6 +96,23 @@ function ProductsList() {
 
   return (
     <div className="row position-relative g-3 justify-content-between">
+      <div
+        className="position-fixed d-flex"
+        style={{ left: "95%", bottom: 20 }}
+      >
+        <Link
+          className="btn d-flex justify-content-center align-items-center shadow"
+          to="/carrito"
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            backgroundColor: "#ffa36c",
+          }}
+        >
+          <i className="fas fa-cart-plus"></i>
+        </Link>
+      </div>
       <SearchBox setProducts={setProducts} />
       {/* <div className="col-md-4">
         <SideBar

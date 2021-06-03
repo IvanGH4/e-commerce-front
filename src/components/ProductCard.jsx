@@ -25,7 +25,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="custom-product-card cardglobal my-5 text-center py-2">
+    <div className="custom-product-card cardglobal my-5 text-center pt-2 pb-5">
       <div className="card-body">
         {product.featured ? (
           <span className="badge badge-custom">Destacado</span>

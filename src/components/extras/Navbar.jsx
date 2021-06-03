@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userActions";
 
 import "../css/Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+  const [totalQuantity, setTotalQuantity] = useState(0);
+
   const location = useLocation();
 
   const dispatch = useDispatch();
@@ -17,6 +19,14 @@ function Navbar() {
   const cart = useSelector((state) => state.cart);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    let totalQty = 0;
+    cart.map((item) => {
+      totalQty += item.productQuantity;
+    });
+    setTotalQuantity(totalQty);
+  }, [cart]);
 
   return (
     <header
@@ -83,7 +93,7 @@ function Navbar() {
                   to="/carrito"
                 >
                   <i className="fas fa-cart-plus me-1"></i>
-                  <span>{cart.length}</span>
+                  <span>{totalQuantity}</span>
                 </NavLink>
               </li>
               {!user ? (
@@ -110,29 +120,76 @@ function Navbar() {
               ) : (
                 <>
                   {user.userRole === "ADMIN" ? (
-                    <li className="nav-item">
-                      <NavLink to="/admin" className="nav-link custom-link">
-                        <i className="fas fa-user"></i> Administrador
-                      </NavLink>
-                    </li>
+                    <div class="dropdown">
+                      <button
+                        class="btn dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Mi cuenta
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li className="nav-item">
+                          <NavLink to="/admin" className="nav-link custom-link">
+                            <i className="fas fa-user me-2"></i>Administrador
+                          </NavLink>
+                        </li>
+                        <li className="nav-item">
+                          <button
+                            className="nav-link btn custom-link"
+                            onClick={() => {
+                              dispatch(logout());
+                              history.push("/");
+                            }}
+                          >
+                            Cerrar Sesión
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   ) : (
-                    <li className="nav-item">
-                      <NavLink to="/perfil" className="nav-link custom-link">
-                        <i className="fas fa-user"></i>
-                      </NavLink>
-                    </li>
+                    <div class="dropdown">
+                      <button
+                        class="btn dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Mi cuenta
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton2"
+                      >
+                        <li className="nav-item">
+                          <NavLink
+                            to="/perfil"
+                            className="nav-link custom-link"
+                          >
+                            <i className="fas fa-user me-2"></i>
+                            Perfil
+                          </NavLink>
+                        </li>
+                        <li className="nav-item">
+                          <button
+                            className="nav-link btn custom-link"
+                            onClick={() => {
+                              dispatch(logout());
+                              history.push("/");
+                            }}
+                          >
+                            Cerrar Sesión
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
                   )}
-                  <li className="nav-item">
-                    <button
-                      className="nav-link btn custom-link"
-                      onClick={() => {
-                        dispatch(logout());
-                        history.push("/");
-                      }}
-                    >
-                      Cerrar Sesión
-                    </button>
-                  </li>
                 </>
               )}
               <li className="nav-item">

@@ -57,13 +57,9 @@ function DashboardProductsTable() {
 
       <div className="row justify-content-center mt-5">
         <div className="fs-3 justify-content-start">
-          <button
-            className="btn "
-            data-bs-toggle="modal"
-            data-bs-target="#createModal"
-          >
+          <Link to="/admin/nuevo-producto" className="btn">
             <i className="fas fa-plus-square"></i> Crear un producto
-          </button>
+          </Link>
         </div>
       </div>
 

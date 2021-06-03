@@ -20,6 +20,7 @@ function Cart() {
   const location = useLocation();
   const { addToast } = useToasts();
   const [total, setTotal] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   const checkoutOrder = async () => {
     const response = await axios.post(
@@ -60,10 +61,13 @@ function Cart() {
 
   useEffect(() => {
     let cost = 0;
+    let totalQty = 0;
     cart.map((item) => {
       cost += item.totalPrice;
+      totalQty += item.productQuantity;
     });
     setTotal(cost);
+    setTotalQuantity(totalQty);
   }, [cart]);
 
   return (
@@ -136,7 +140,7 @@ function Cart() {
           </div>
           <div className="col-md-4 position-relative">
             <div className="my-custom-card p-5 position-md-sticky sticky-md-top">
-              <h5>Tu carrito tiene {cart.length} productos</h5>
+              <h5>Tu carrito tiene {totalQuantity} productos</h5>
               <p>
                 Total:{" "}
                 {new Intl.NumberFormat("UYU", {

@@ -61,13 +61,9 @@ function DashboardCategoriesTable() {
         </div>
         <div className="row  my-5">
           <div className="justify-content-start fs-3">
-            <button
-              className="btn"
-              data-bs-toggle="modal"
-              data-bs-target="#createModal"
-            >
+            <Link to="/admin/nueva-categoria" className="btn">
               <i className="fas fa-plus-square"></i> Crear una categoría
-            </button>
+            </Link>
           </div>
         </div>
       </div>

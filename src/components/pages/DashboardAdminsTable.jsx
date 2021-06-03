@@ -72,13 +72,9 @@ function DashboardAdminsTable() {
           </div>
           <div className="row justify-content-start">
             <div>
-              <button
-                className="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#createModal"
-              >
+              <Link to="/admin/nuevo-admin" className="btn">
                 <i className="fas fa-plus-square"></i> Crear un administrador
-              </button>
+              </Link>
             </div>
           </div>
           <div className="row">

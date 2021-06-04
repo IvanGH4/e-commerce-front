@@ -96,10 +96,7 @@ function ProductsList() {
 
   return (
     <div className="row position-relative g-3 justify-content-between">
-      <div
-        className="position-fixed d-flex"
-        style={{ left: "95%", bottom: 20 }}
-      >
+      <div className="position-fixed d-flex float-cart-btn">
         <Link
           className="btn d-flex justify-content-center align-items-center shadow"
           to="/carrito"

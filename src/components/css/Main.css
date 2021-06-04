@@ -91,6 +91,19 @@ body {
   color: #474554;
 }
 
+.float-cart-btn {
+  left: 95%;
+  bottom: 10%;
+}
+
+@media (max-width: 1100px) {
+  .float-cart-btn {
+    left: 80%;
+    bottom: 5%;
+    z-index: 99999;
+  }
+}
+
 @media (max-width: 768px) {
   .custom-product-card {
     width: 100%;
